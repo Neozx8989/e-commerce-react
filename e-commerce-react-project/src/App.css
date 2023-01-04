@@ -90,10 +90,17 @@ i {
    margin: auto;
    margin-top: 52px;
    padding: 14px;
-
+   color: #003F62;
+   display: flex;
 }
+
+
+
+
 
 .card img {
     width: 150px;
+    font-size: 14px;
 }
+
 

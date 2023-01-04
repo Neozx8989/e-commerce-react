@@ -23,6 +23,8 @@ function App() {
   
       return <PopularProductsFunc
         productImageUrl={product.productImageUrl} 
+        title={product.title}
+        item={product.item}
       />
     })
 
