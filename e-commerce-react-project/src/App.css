@@ -21,3 +21,24 @@
     justify-content: space-between;
     font-size: 14px;
 }
+
+.navbar-area {
+    background-color: #003F62;
+    padding: 10px 118px;
+}
+
+.search-input {
+    padding: 10px 25px;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    margin-left: 85px;
+
+}
+
+.button-area {
+    padding: 10px;
+    border: none;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    background-color: orange;
+}

@@ -13,6 +13,7 @@ const Product = [
       votes: generateVoteCount(),
       submitterAvatarUrl: 'images/avatars/daniel.jpg',
       productImageUrl: 'images/products/image-aqua.png',
+      logoImageUrl: 'images/logo-1.png',
     },
    ];
    
