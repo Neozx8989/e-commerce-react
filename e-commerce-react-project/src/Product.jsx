@@ -1,20 +1,29 @@
 function ProductFunc(props){
-    return (
+      return (
       <div className="container">
         <div className="container-text">
-          <a>{props.title}</a>
+          <p>{props.helpus}</p>
           <div className="container-header-right-text">
-            <p>{props.description}</p>
-            <p>{props.track}</p>
+            <p>{props.store}</p>  {/* icon ? */}
+            <p>{props.track}</p>  {/* icon ? */}
           </div>
         </div>
         <header className="header-area">
-          <nav className="navbar-area">
+          <nav>
+          <div className="navbar-area">
             <img src={props.logoImageUrl} alt="electon-logo" />
-
-            <input type="text" className="search-input" name="search" placeholder="Search any thing"  />
+            <input type="text" className="search-input" name="search" placeholder="Search any things"  />
             <button className="button-area">Search</button>
+          </div>
+          <div className="sign-in">
+            <p>{props.signin}</p> 
+            <p>*Like-icon</p>
+            <p>*Inbox-icon</p>
+          </div>
           </nav>
+          <div className="nav-items">
+              
+          </div>
         </header>
       </div>
     )
