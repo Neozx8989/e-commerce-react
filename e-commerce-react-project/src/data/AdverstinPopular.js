@@ -1,4 +1,4 @@
-const PopularProducts = [
+const AdverstingPopular = [
     {
         productImageUrl:'images/popular-products/speaker.png',
         title:'Speaker',
@@ -16,4 +16,4 @@ const PopularProducts = [
     },
 ]
 
-export default PopularProducts
+export default AdverstingPopular

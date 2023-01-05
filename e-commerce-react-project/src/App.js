@@ -2,10 +2,14 @@ import './App.css';
 import ProductFunc from './Product';
 import products from './Api';
 import MainMenu from './components/MainMenu';
-import PopularProducts from './data/popular-product';
-import PopularProductsFunc from './components/PopularProducts';
+import AdverstingPopular from './data/AdverstinPopular';
+import AdverstingPopularFunc from './components/AdverstingPopular';
 import AdverstingFunc from './components/AdverstingSlider';
 import AdverstingSlider from './data/adversting'
+import PopularProducts from './data/PopularProducts';
+import PopularProductsFunc from './components/PopularProducs';
+import ProductsCard from './data/ProductsCard';
+import ProductsFunc from './components/ProductsCard';
 
 function App() {
   const productList = products.map((product) => {
@@ -29,13 +33,33 @@ function App() {
     />
   })
 
-    const PopularProductscard = PopularProducts.map((product) => {
+    const AdverstingPopularCard = AdverstingPopular.map((product) => {
       console.log(product)  
-      return <PopularProductsFunc
+      return <AdverstingPopularFunc
         productImageUrl={product.productImageUrl} 
         title={product.title}
         item={product.item}
       />
+    })
+
+    const PopularProductsArea = PopularProducts.map((products) => {
+      return <PopularProductsFunc
+        title={products.title}
+        item1={products.item1}
+        item2={products.item2}
+        item3={products.item3}
+        item4={products.item4}
+      />
+    })
+
+    const ProductsCardArea = ProductsCard.map((product)=> {
+      return <ProductsFunc 
+        productImageUrl={product.productImageUrl}
+        title={product.title}
+        price={product.price}
+        rating={product.rating}
+        basket={product.basket}
+      />  
     })
 
 
@@ -44,7 +68,9 @@ function App() {
         {productList}
           < MainMenu /> 
           {AdverstingCard}
-           <div className='d-flex gap-4 j-content justify-content-center'>{PopularProductscard}</div>
+           <div className='d-flex gap-4 j-content justify-content-center'>{AdverstingPopularCard}</div>
+           {PopularProductsArea}
+           {ProductsCardArea}
     </div>
   )
 }

@@ -1,4 +1,4 @@
-function PopularProductsFunc(props) {
+function AdverstingPopularFunc(props) {
     return (
         <div className="product-area">
             <div className="products-card">
@@ -12,4 +12,4 @@ function PopularProductsFunc(props) {
     )
 }
 
-export default PopularProductsFunc
+export default AdverstingPopularFunc
