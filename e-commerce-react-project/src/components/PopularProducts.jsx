@@ -1,6 +1,6 @@
 function PopularProductsFunc(props) {
     return (
-        <div>
+        <div className="product-area">
             <div className="products-card">
                 <img src={props.productImageUrl} alt="Speaker" />
                 <div className="product-card-text">    

@@ -13,12 +13,19 @@ export default function MainMenu(){
     })
 
     return(
-        <div>
-            <Navbar className="navbar-body">
-                <BrowseCategories />
-                    {subMenus} 
-                <div className='free'>30 Days Free Return</div>
-            </Navbar>
+        <div className='navigation-menus'>
+           <div className='categories'>
+            
+                <select>
+                    <option> Browse categories </option>
+                    <option>apple</option>
+                    <option>samsung</option>
+                    <option>huawei</option>
+                    <option>canon</option>
+                </select>
+            </div>
+           <div className='menu-items'>{subMenus}</div>    
+           <p className='free'>30 Days Free Return</p>
         </div>
     )
 }
