@@ -1,8 +1,9 @@
 import './App.css';
 import ProductFunc from './Product';
 import products from './Api';
-import 'bootstrap/dist/css/bootstrap.min.css'
-
+import MainMenu from './components/MainMenu';
+import PopularProducts from './data/popular-product';
+import PopularProductsFunc from './components/PopularProducts';
 
 function App() {
   const productList = products.map((product) => {
@@ -11,15 +12,26 @@ function App() {
     return <ProductFunc 
       helpus={product.helpus} 
       store={product.store}
-      track={product.track}
+      truck={product.truck}
       signin={product.signin}
       logoImageUrl={product.logoImageUrl}
     />
   })
 
+    const PopularProductscard = PopularProducts.map((product) => {
+      console.log(product)
+  
+      return <PopularProductsFunc
+        productImageUrl={product.productImageUrl} 
+      />
+    })
+
+
   return (
-    <div className='Cont'>
-      <header className="web-header">{productList}</header>
+    <div className='menu-container'>
+        {productList}
+          <MainMenu /> 
+          {PopularProductscard}
     </div>
   )
 }
