@@ -4,12 +4,23 @@ import products from './Api';
 import MainMenu from './components/MainMenu';
 import AdverstingPopular from './data/AdverstinPopular';
 import AdverstingPopularFunc from './components/AdverstingPopular';
+
 import AdverstingFunc from './components/AdverstingSlider';
 import AdverstingSlider from './data/adversting'
+
 import PopularProducts from './data/PopularProducts';
 import PopularProductsFunc from './components/PopularProducs';
+
+
 import ProductsCard from './data/ProductsCard';
 import ProductsFunc from './components/ProductsCard';
+
+import SaleProduct from './data/SaleProduct'
+import SaleProductFunc from './components/SaleProduct';
+
+import {AddCarts , NextAddCarts } from './data/AddCarts';
+import {AddingToCarts , NextAddToCarts} from './components/AddToCarts';
+
 
 function App() {
   const productList = products.map((product) => {
@@ -62,6 +73,35 @@ function App() {
       />  
     })
 
+    const SaleProductArea = SaleProduct.map((product) => {
+      return <SaleProductFunc 
+        salelaptop={product.salelaptop}
+        newproductbutton={product.newproductbutton}
+        title={product.title}
+        displaysize={product.displaysize}
+        shopproductbutton={product.shopproductbutton}
+      />
+    })
+
+    const AddToCartArea = AddCarts.map((product) => {
+      return <AddingToCarts 
+        productImageUrl={product.productImageUrl}
+        name={product.name}
+        price={product.price}
+        ratingstar={product.ratingstar}
+        addbutton={product.addbutton}
+      />
+    })
+
+    const NextAddToCartArea = NextAddCarts.map((product)=> {
+      return <NextAddToCarts
+      productImageUrl={product.productImageUrl}
+      name={product.name}
+      price={product.price}
+      ratingstar={product.ratingstar}
+      />
+    })
+
 
   return (
     <div className='menu-container'>
@@ -70,7 +110,12 @@ function App() {
           {AdverstingCard}
            <div className='d-flex gap-4 j-content justify-content-center'>{AdverstingPopularCard}</div>
            {PopularProductsArea}
-           {ProductsCardArea}
+          <div className='all-products'>{ProductsCardArea}</div>
+          {SaleProductArea}
+          <div className='all-adding-cart'>
+            {AddToCartArea}
+            <div className='next-adding-cart'>{NextAddToCartArea}</div>
+          </div>
     </div>
   )
 }

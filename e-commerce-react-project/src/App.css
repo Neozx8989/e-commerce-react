@@ -56,6 +56,7 @@ nav {
 
 i {
     font-size: 16px;
+    cursor: pointer;
 }
 
 .nav-items {
@@ -82,6 +83,10 @@ i {
     color: #003F62;
     font-weight: 700;
     padding-top: 10px;
+}
+
+.products-card-area img {
+    height: 195px;
 }
 
 .products-card {
@@ -124,7 +129,14 @@ i {
     gap: 450px;
     justify-content: space-evenly;
     height: 394px;
+    width: 1440px;
     padding: 67px 174px;
+    margin: 0 auto;
+}
+
+.adversting-area img {
+    height: 356px;
+    padding-bottom: 52px;
 }
 
 .left-area h1 {
@@ -149,10 +161,13 @@ i {
 
 .shopview button:first-child {
     background-color: #eda415;
+    color: white;
+    font-weight: 600;
 }
 
 .shopview button:last-child {
-   border: 1px solid #316887
+   border: 1px solid #316887;
+   background-color: white;
 }
 
 /* Main menu navigations */
@@ -215,6 +230,8 @@ i {
     padding: 10px 30.5px;
     color: #1b5a7d;
     font-weight: 500;
+    font-size: 16.5px;
+    background-color: white;
 }
 
 /* products Card area */
@@ -228,6 +245,7 @@ i {
 
 .products-card-area img {
     padding: 16.34px 40.39px;
+    border-radius: 20px;
 }
 
 .product-info {
@@ -251,4 +269,149 @@ i {
 
 .products-card-area p {
     font-size: 20px;
+}
+
+.all-products {
+    height: 657px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 26px;
+    justify-content: center;
+    width: 1314px;
+    margin: 0 auto;
+}
+
+/* laptop shopping area */
+
+.laptop-picture {
+    background-image: url(../public/images/applelaptop.png);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 417px;
+    margin-top: 129px;
+    margin-bottom: 94px;
+}
+
+.laptop-text-area {
+    text-align: center;
+    padding-top: 91px;
+    padding-left: 630px;
+}
+
+.laptop-picture button {
+    border: none;
+    background-color: #eda415;
+    padding: 12px 32px;
+    border-radius: 20px;
+    color: white;
+    font-weight: 500px;
+    font-size: 14.09px;
+    margin: 15px;
+}
+
+.laptop-picture h1 {
+    font-weight: 700;
+    font-size: 41px;
+    line-height: 62px;
+    color: #2e8fc5;
+}
+
+.laptop-picture p {
+    font-size: 18px;
+    font-weight: 500;
+    color: #ffffff;
+}
+
+/* ADD TO CARTS */ 
+
+.all-adding-cart {
+    display: flex;
+    gap: 32px;
+    justify-content: center;
+    margin-bottom: 75px;
+}
+
+.deepbass-cart {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 600;
+    line-height: 30px;
+    border: 1px solid #b6b6b6;
+    width: 803px;
+    border-radius: 20px;
+}
+
+.deepbass-cart img {
+    padding: 44px 31px 0 0;
+}
+
+.deepbass-cart .text-area {
+    padding: 151px, 62px;
+}
+
+.deepbass-cart h1 {
+    font-size: 21.09px;
+    color: #003F62;
+    margin-bottom: 15px;
+}
+
+.deepbass-cart p {
+    font-size: 17px;
+    color: #4a4a4a;
+    margin-bottom: 15px;
+}
+
+.deepbass-cart .rate {
+    margin-bottom: 37px;
+    font-size: 20px;
+    color: #a5a5a5;
+}
+
+.deepbass-cart button {
+    border: none;
+    padding: 18px 25px;
+    border-radius: 19px;
+    background-color: #87BCD9;
+    color: #272727;
+    font-size: 15px;
+    line-height: 24px;
+}
+
+.deepbass-cart i {
+    margin-left: 39px;
+    background-color: #eda415;
+    padding: 10px 13px;
+    border-radius: 50%;
+    color: white;
+}
+
+/* Next carts */
+
+.next-carts {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 500px;
+    border: 1px solid #b6b6b6;
+    padding: 24px 21px;
+    border-radius: 19px;
+    gap: 50px;
+    margin-bottom: 25px;
+}
+
+.next-carts h1 {
+    color: #003F62;
+    font-size: 17px;
+}
+
+.next-carts p {
+    color: #4a4a4a;
+    font-size: 17px;
+}
+
+.next-carts .rate {
+    margin-bottom: 37px;
+    color: #a5a5a5;
 }
