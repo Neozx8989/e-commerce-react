@@ -21,11 +21,12 @@ import SaleProductFunc from './components/SaleProduct';
 import {AddCarts , NextAddCarts } from './data/AddCarts';
 import {AddingToCarts , NextAddToCarts} from './components/AddToCarts';
 
+import { LicensesData , LicensesData2 , LicensesData3 } from './data/Licenses';
+import { LicenseCardFunc , LicenseCardFunc2 , LicenseCardFunc3} from './components/LicenseCard';
+
 
 function App() {
   const productList = products.map((product) => {
-    console.log(product)
-
     return <ProductFunc 
       helpus={product.helpus} 
       store={product.store}
@@ -102,6 +103,26 @@ function App() {
       />
     })
 
+    const LicenseCardArea = LicensesData.map((product)=> {
+      return <LicenseCardFunc
+        title={product.title}
+        price={product.price}
+      />
+    })
+
+    const LicenseCardArea2 = LicensesData2.map((product)=> {
+      return <LicenseCardFunc2
+        title={product.title}
+        price={product.price}
+      />
+    })
+
+    const LicenseCardArea3 = LicensesData3.map((product)=> {
+      return <LicenseCardFunc3
+        title={product.title}
+        price={product.price}
+      />
+    })
 
   return (
     <div className='menu-container'>
@@ -115,6 +136,11 @@ function App() {
           <div className='all-adding-cart'>
             {AddToCartArea}
             <div className='next-adding-cart'>{NextAddToCartArea}</div>
+          </div>
+          <div className='license-card-cont'>
+            {LicenseCardArea}
+            {LicenseCardArea2}
+            {LicenseCardArea3}
           </div>
     </div>
   )
