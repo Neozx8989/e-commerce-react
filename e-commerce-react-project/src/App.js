@@ -1,4 +1,6 @@
 import './App.css';
+import AliceCarousel from 'react-alice-carousel'
+
 import ProductFunc from './Product';
 import products from './Api';
 import MainMenu from './components/MainMenu';
