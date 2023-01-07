@@ -9,8 +9,11 @@
     display: flex;              
     justify-content: space-between;
     font-size: 14px;
-    margin: 21px 61px;
     color: #292D32;
+    width: 1440px;
+    margin: 0 auto;
+    padding: 22.5px 61px;
+    
 }
 
 .container-header-right-text {
@@ -25,6 +28,8 @@ nav {
     background-color: #003F62;
     padding: 25px 118px;
     font-size: 14px;
+    width: 1440px ;
+    margin: 0 auto;
 }
 
 .search-input {
@@ -171,13 +176,22 @@ i {
 }
 
 /* Main menu navigations */
+.nav-menus {
+    padding-top: 15px;
+}
+
 .navigation-menus {
     background-color: #f4f4f4;
     height: 71px;
     display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 327px;
+    justify-content: space-between;
+    width: 1440px;
+    margin: 0 auto;
+    padding: 0px 63px;
+}
+
+.navigation-menus .free {
+    padding-top: 23px;
 }
 
 .categories select{
