@@ -8,14 +8,15 @@ export default function MainMenu(){
 
     const subMenus = menus.map(subMenu => {
         return(
-            <SubMenu title={subMenu.title} position={subMenu.position} children={subMenu.children} />
+            <div className='nav-menus'>
+                <SubMenu title={subMenu.title} position={subMenu.position} children={subMenu.children} />
+            </div>
         )
     })
 
     return(
         <div className='navigation-menus'>
            <div className='categories'>
-            
                 <select>
                     <option> Browse categories </option>
                     <option>apple</option>
