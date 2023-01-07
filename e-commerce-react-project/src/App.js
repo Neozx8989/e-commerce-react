@@ -24,6 +24,9 @@ import {AddingToCarts , NextAddToCarts} from './components/AddToCarts';
 import { LicensesData , LicensesData2 , LicensesData3 } from './data/Licenses';
 import { LicenseCardFunc , LicenseCardFunc2 , LicenseCardFunc3} from './components/LicenseCard';
 
+import { CommentCard, CommentCard2, CommentCard3 } from './data/CommentCard';
+import { CommentCardFunc , CommentCardFunc2 , CommentCardFunc3 } from './components/CommentCardFunc';
+
 
 function App() {
   const productList = products.map((product) => {
@@ -124,6 +127,30 @@ function App() {
       />
     })
 
+    const CommentCardArea = CommentCard.map((card)=>{
+      return <CommentCardFunc 
+        profileImageUrl={card.profileImageUrl}
+        name={card.name}
+        comment={card.comment}
+      />
+    })
+
+    const CommentCardArea2 = CommentCard2.map((card)=>{
+      return <CommentCardFunc2 
+        profileImageUrl={card.profileImageUrl}
+        name={card.name}
+        comment={card.comment}
+      />
+    })
+
+    const CommentCardArea3 = CommentCard3.map((card)=>{
+      return <CommentCardFunc3 
+        profileImageUrl={card.profileImageUrl}
+        name={card.name}
+        comment={card.comment}
+      />
+    })
+
   return (
     <div className='menu-container'>
         {productList}
@@ -141,6 +168,11 @@ function App() {
             {LicenseCardArea}
             {LicenseCardArea2}
             {LicenseCardArea3}
+          </div>
+          <div className='comment-card-area-cont'>
+            {CommentCardArea}
+            {CommentCardArea2}
+            {CommentCardArea3}
           </div>
     </div>
   )

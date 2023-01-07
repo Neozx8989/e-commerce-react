@@ -453,3 +453,47 @@ i {
     font-weight: 400;
     color: #003F62;
 }
+
+ /* comments card area */
+.comment-card-area-cont {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    margin-bottom: 120px;
+}
+
+.comment-card-cont {
+    border: 1px solid #BABABA;
+    border-radius: 20px;
+    padding: 16px;
+}
+
+ .comment-card-head {
+    display: flex;
+    align-items: center;
+    gap: 37px;
+ }
+
+ .comment-card-head img {
+    border: 3px dashed;
+    border-radius: 50%;
+    padding: 3px;
+    color: #eda415;
+    margin-bottom: 26px;
+ }
+
+ .comment-card-head h1 {
+    font-size: 15.9px;
+    color: #003F62;
+    font-weight: 500;
+ }
+
+ .comment-card-cont p {
+    color: #003F62;
+    font-weight: 400;
+    font-size: 13.17px;
+    background-color: #e2f4ff;
+    padding: 11px 26px;
+    width: 395.4px;
+    border-radius: 20px;
+ }
