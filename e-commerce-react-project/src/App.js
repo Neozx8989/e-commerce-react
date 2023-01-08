@@ -1,25 +1,17 @@
 import './App.css';
+import AliceCarousel from 'react-alice-carousel'
+
 import ProductFunc from './Product';
 import products from './Api';
 import MainMenu from './components/MainMenu';
-import AdverstingPopular from './data/AdverstinPopular';
-import AdverstingPopularFunc from './components/AdverstingPopular';
+import {AdverstingPopular , Adversting} from './data/AdverstinPopular';
+import {AdverstingPopularFunc , AdverstingFunc} from './components/AdverstingPopular';
 
-import AdverstingFunc from './components/AdverstingSlider';
-import AdverstingSlider from './data/adversting'
+import {PopularProducts, ProductsCard} from './data/PopularProducts';
+import {PopularProductsFunc , ProductsCardFunc}from './components/PopularProducs';
 
-import PopularProducts from './data/PopularProducts';
-import PopularProductsFunc from './components/PopularProducs';
-
-
-import ProductsCard from './data/ProductsCard';
-import ProductsFunc from './components/ProductsCard';
-
-import SaleProduct from './data/SaleProduct'
-import SaleProductFunc from './components/SaleProduct';
-
-import {AddCarts , NextAddCarts } from './data/AddCarts';
-import {AddingToCarts , NextAddToCarts} from './components/AddToCarts';
+import {SaleLaptop , AddCarts , NextAddCarts } from './data/AddCarts';
+import {SaleProductFunc , AddingToCarts , NextAddToCarts} from './components/AddToCarts';
 
 import { LicensesData , LicensesData2 , LicensesData3 } from './data/Licenses';
 import { LicenseCardFunc , LicenseCardFunc2 , LicenseCardFunc3} from './components/LicenseCard';
@@ -27,11 +19,8 @@ import { LicenseCardFunc , LicenseCardFunc2 , LicenseCardFunc3} from './componen
 import { CommentCard, CommentCard2, CommentCard3 } from './data/CommentCard';
 import { CommentCardFunc , CommentCardFunc2 , CommentCardFunc3 } from './components/CommentCardFunc';
 
-import SponserData from './data/Sponser';
-import SponserFunc from './components/SponserFunc';
-
-import { LatestNewsData , NewsCardData , NewsCardData2 } from './data/LatestNews';
-import { LatestNewsFunc, LatestNewsCardFunc , LatestNewsCardFunc2 } from './components/LatestNewsFunc';
+import {SponserData , LatestNewsData , NewsCardData , NewsCardData2 } from './data/LatestNews';
+import {SponsereFunc , LatestNewsFunc, LatestNewsCardFunc , LatestNewsCardFunc2 } from './components/LatestNewsFunc';
 
 import { FooterContactData , FooterBottomData , FooterTermsData } from './data/Footer';
 import { FooterFunc , FooterBottomFunc , FooterTermsFunc } from './components/FooterFunc';
@@ -48,7 +37,7 @@ function App() {
     />
   })
 
-  const AdverstingCard = AdverstingSlider.map((advers) => {
+  const AdverstingCard = Adversting.map((advers) => {
     return <AdverstingFunc
       title={advers.title}
       buttonshop={advers.buttonshop}
@@ -77,7 +66,7 @@ function App() {
     })
 
     const ProductsCardArea = ProductsCard.map((product)=> {
-      return <ProductsFunc 
+      return <ProductsCardFunc 
         productImageUrl={product.productImageUrl}
         title={product.title}
         price={product.price}
@@ -86,7 +75,7 @@ function App() {
       />  
     })
 
-    const SaleProductArea = SaleProduct.map((product) => {
+    const SaleProductArea = SaleLaptop.map((product) => {
       return <SaleProductFunc 
         salelaptop={product.salelaptop}
         newproductbutton={product.newproductbutton}
@@ -161,7 +150,7 @@ function App() {
     })
 
     const SponserCompanyArea = SponserData.map((logos)=> {
-      return <SponserFunc 
+      return <SponsereFunc 
         logoImageUrl={logos.logoImageUrl}
       />
     })

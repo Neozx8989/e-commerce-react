@@ -1,3 +1,14 @@
+const SaleLaptop = [
+    {
+        salelaptop:'images/applelaptop.png',
+        newproductbutton:'New laptop',
+        title:'Sale up to 50% off',
+        displaysize:'12 inch hd display',
+        shopproductbutton:'Shop now',
+    },
+
+]
+
 const AddCarts = [
     {
         productImageUrl: 'images/popular-products/deepbass.png',
@@ -23,4 +34,4 @@ const NextAddCarts = [
     },
 ]
 
-export {AddCarts , NextAddCarts }
+export {SaleLaptop , AddCarts , NextAddCarts }
