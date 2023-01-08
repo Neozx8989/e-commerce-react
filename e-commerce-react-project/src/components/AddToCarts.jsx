@@ -1,5 +1,20 @@
-function AddingToCarts(props){
+function SaleProductFunc(props) {
     return (
+        <div>
+            <div className="laptop-picture">
+                <div className="laptop-text-area">
+                <button>{props.newproductbutton}</button>
+                <h1>{props.title}</h1>
+                <p>{props.displaysize}</p>
+                <button>{props.shopproductbutton}</button>
+                </div>
+            </div>
+        </div>
+    )
+}
+
+function AddingToCarts(props){
+    return ( 
         <div>
             <div className="deepbass-cart">
                 <img src={props.productImageUrl} alt="JBL bar 2.1 deep bass" />
@@ -29,4 +44,4 @@ function NextAddToCarts(props){
     )
 }
 
-export {AddingToCarts , NextAddToCarts}
+export {SaleProductFunc , AddingToCarts , NextAddToCarts}

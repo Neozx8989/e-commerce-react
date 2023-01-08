@@ -1,3 +1,11 @@
+function SponsereFunc(props) {
+    return (
+        <div className="sponser-area">
+            <img src={props.logoImageUrl} alt="Sponser Company's Logo" />
+        </div>
+    )
+}
+
 function LatestNewsFunc(props) {
     return (
         <div className="latest-news-view-all">
@@ -37,4 +45,4 @@ function LatestNewsCardFunc2(props) {
     )
 }
 
-export {LatestNewsFunc, LatestNewsCardFunc, LatestNewsCardFunc2}
+export {SponsereFunc , LatestNewsFunc, LatestNewsCardFunc, LatestNewsCardFunc2}

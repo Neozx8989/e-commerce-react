@@ -16,4 +16,15 @@ const AdverstingPopular = [
     },
 ]
 
-export default AdverstingPopular
+const Adversting = [
+    {
+        adverstingImageUrl: 'images/popular-products/Canoncamera.png',
+        title: 'Canon camera',
+        buttonshop: 'Shop now',
+        buttonview: 'View more',
+    },
+
+]
+
+export { AdverstingPopular , Adversting }
+ 
