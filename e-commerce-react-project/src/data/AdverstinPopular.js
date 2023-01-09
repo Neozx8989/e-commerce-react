@@ -14,6 +14,7 @@ const AdverstingPopular = [
         title:'DSLR camera',
         item:'(6 items)',
     },
+    
 ]
 
 const Adversting = [
