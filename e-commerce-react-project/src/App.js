@@ -1,6 +1,7 @@
 import './App.css';
 import AliceCarousel from 'react-alice-carousel'
 
+
 import ProductFunc from './Product';
 import products from './Api';
 import MainMenu from './components/MainMenu';
@@ -213,9 +214,17 @@ function App() {
         {productList}
           < MainMenu /> 
           {AdverstingCard}
-           <div className='d-flex gap-4 j-content justify-content-center'>{AdverstingPopularCard}</div>
+          <AliceCarousel autoPlay autoPlayInterval="3000">
+            <div className='d-flex gap-4 j-content justify-content-center'>{AdverstingPopularCard}</div>
+            <div className='d-flex gap-4 j-content justify-content-center'>{AdverstingPopularCard}</div>
+            <div className='d-flex gap-4 j-content justify-content-center'>{AdverstingPopularCard}</div>
+          </AliceCarousel>
            {PopularProductsArea}
-          <div className='all-products'>{ProductsCardArea}</div>
+           <AliceCarousel autoPlay autoPlayInterval="3000">
+            <div className='all-products'>{ProductsCardArea}</div>
+            <div className='all-products'>{ProductsCardArea}</div>
+            <div className='all-products'>{ProductsCardArea}</div>
+           </AliceCarousel>
           {SaleProductArea}
           <div className='all-adding-cart'>
             {AddToCartArea}
@@ -226,20 +235,50 @@ function App() {
             {LicenseCardArea2}
             {LicenseCardArea3}
           </div>
-          <div className='comment-card-area-cont'>
-            {CommentCardArea}
-            {CommentCardArea2}
-            {CommentCardArea3}
-          </div>
+          <AliceCarousel autoPlay autoPlayInterval="3000">
+            <div className='comment-card-area-cont'>
+              {CommentCardArea}
+              {CommentCardArea2}
+              {CommentCardArea3}
+            </div>
+            <div className='comment-card-area-cont'>
+              {CommentCardArea}
+              {CommentCardArea2}
+              {CommentCardArea3}
+            </div>
+            <div className='comment-card-area-cont'>
+              {CommentCardArea}
+              {CommentCardArea2}
+              {CommentCardArea3}
+            </div>
+          </AliceCarousel>
           <div className='sponser-company-logo'>
             {SponserCompanyArea}
           </div>
           <div className='latest-news-zone'>
             {LatestNewsArea}
-            <div className='card-news-zone'>
-            {LatestNewsCardArea}  
-            {LatestNewsCardArea2}  
-            </div>
+            <AliceCarousel autoPlay autoPlayInterval="3000">
+              <div className='card-news-zone'>
+                {LatestNewsCardArea}  
+                {LatestNewsCardArea2}  
+              </div>
+              <div className='card-news-zone'>
+                {LatestNewsCardArea}  
+                {LatestNewsCardArea2}  
+              </div>
+              <div className='card-news-zone'>
+                {LatestNewsCardArea}  
+                {LatestNewsCardArea2}  
+              </div>
+              <div className='card-news-zone'>
+                {LatestNewsCardArea}  
+                {LatestNewsCardArea2}  
+              </div>
+              <div className='card-news-zone'>
+                {LatestNewsCardArea}  
+                {LatestNewsCardArea2}  
+              </div>
+            </AliceCarousel>
           </div>
           <div className='footer-zone'>
             {FooterContactArea}

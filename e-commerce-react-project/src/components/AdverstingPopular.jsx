@@ -11,6 +11,7 @@ function AdverstingPopularFunc(props) {
                 </div>  
             </div>
         </div>
+        
     )
 }
 
@@ -29,13 +30,13 @@ function AdverstingFunc(props) {
         </div>
         <div className="adversting-area">
             <div className="left-area">
-                <h1>Samsun Laptop</h1>
+                <h1>Sony Camera</h1>
                 <div className="shopview">
                     <button>{props.buttonshop}</button>
                     <button>{props.buttonview}</button>
                 </div>
             </div>
-            <img src="https://www.pngkit.com/png/full/824-8241893_samsung-notebook-9-best-samsung-laptop-2018.png" alt="Canon camera" />
+            <img src="https://pngimg.com/d/video_camera_PNG7854.png" alt="Canon camera" />
         </div>
         <div className="adversting-area">
             <div className="left-area">
