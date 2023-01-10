@@ -1,3 +1,5 @@
+import { propTypes } from "react-bootstrap/esm/Image"
+
 function LicenseCardFunc(props) {
     return(
         <div className="license-card-area">
@@ -10,5 +12,17 @@ function LicenseCardFunc(props) {
     )
 }
 
+function CommentCardFunc(props) {
+    return (
+        <div className="comment-card-cont">
+            <div className="comment-card-head">
+                <img src={props.profileImageUrl} alt="Savannah Nguyen Picture" />
+                <h1>{props.name}</h1>
+            </div>
+            <p>{props.comment}</p>
+        </div>
+    )
+}
 
-export default LicenseCardFunc
+
+export { LicenseCardFunc , CommentCardFunc }

@@ -1,31 +1,23 @@
 import './App.css';
 import AliceCarousel from 'react-alice-carousel'
 
-
 import ProductFunc from './Product';
 import products from './Api';
 import MainMenu from './components/MainMenu';
-import { AdverstingPopular, Adversting } from './data/AdverstinPopular';
-import { AdverstingPopularFunc, AdverstingFunc } from './components/AdverstingPopular';
-
-import { PopularProducts, ProductsCard } from './data/PopularProducts';
-import { PopularProductsFunc, ProductsCardFunc } from './components/PopularProducs';
+import { AdverstingPopular, Adversting, PopularProducts, ProductsCard} from './data/AdverstinPopular';
+import { AdverstingPopularFunc, AdverstingFunc , PopularProductsFunc, ProductsCardFunc } from './components/AdverstingPopular';
 
 import { SaleLaptop, AddCarts, NextAddCarts } from './data/AddCarts';
 import { SaleProductFunc, AddingToCarts, NextAddToCarts } from './components/AddToCarts';
 
-import LicensesData from './data/Licenses';
-import LicenseCardFunc from './components/LicenseCard';
-
-import CommentCard from './data/CommentCard';
-import CommentCardFunc from './components/CommentCardFunc';
+import {LicensesData , CommentCard} from './data/Licenses';
+import {LicenseCardFunc , CommentCardFunc} from './components/LicenseCard';
 
 import { SponserData, LatestNewsData, NewsCardData } from './data/LatestNews';
 import { SponsereFunc, LatestNewsFunc, LatestNewsCardFunc } from './components/LatestNewsFunc';
 
 import { FooterContactData, FooterBottomData, FooterTermsData } from './data/Footer';
 import { FooterFunc, FooterBottomFunc, FooterTermsFunc } from './components/FooterFunc';
-
 
 function App() {
   const productList = products.map((product) => {
@@ -112,7 +104,6 @@ function App() {
     />
   })
 
-
   const CommentCardArea = CommentCard.map((card) => {
     return <CommentCardFunc
       profileImageUrl={card.profileImageUrl}
@@ -120,7 +111,6 @@ function App() {
       comment={card.comment}
     />
   })
-
 
   const SponserCompanyArea = SponserData.map((logos) => {
     return <SponsereFunc
