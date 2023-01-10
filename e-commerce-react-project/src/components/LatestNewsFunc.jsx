@@ -27,22 +27,8 @@ function LatestNewsCardFunc(props) {
                 <p>{props.director}</p>
             </div>
         </div>
+        
     )
 }
 
-function LatestNewsCardFunc2(props) {
-    return(
-        <div className="lates-news-card">
-            <img src={props.ImageUrl} alt="" />
-            <div className="news-text-area">
-                <h3>{props.yearOfDate}</h3>
-                <h1>{props.title}</h1>
-                <p>{props.text}</p>
-                <br/>
-                <p>{props.director}</p>
-            </div>
-        </div>
-    )
-}
-
-export {SponsereFunc , LatestNewsFunc, LatestNewsCardFunc, LatestNewsCardFunc2}
+export {SponsereFunc , LatestNewsFunc, LatestNewsCardFunc}
