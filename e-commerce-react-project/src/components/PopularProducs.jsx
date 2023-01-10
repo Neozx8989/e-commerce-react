@@ -1,3 +1,5 @@
+ 
+ 
  function PopularProductsFunc(props) {
     return (
         <div className="products-area">
