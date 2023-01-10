@@ -210,84 +210,90 @@ function App() {
     })
 
   return (
-    <div className='menu-container'>
-        {productList}
-          < MainMenu /> 
-          {AdverstingCard}
-          <AliceCarousel autoPlay autoPlayInterval="3000">
-            <div className='d-flex gap-4 j-content justify-content-center'>{AdverstingPopularCard}</div>
-            <div className='d-flex gap-4 j-content justify-content-center'>{AdverstingPopularCard}</div>
-            <div className='d-flex gap-4 j-content justify-content-center'>{AdverstingPopularCard}</div>
-          </AliceCarousel>
-           {PopularProductsArea}
-           <AliceCarousel autoPlay autoPlayInterval="3000">
-            <div className='all-products'>{ProductsCardArea}</div>
-            <div className='all-products'>{ProductsCardArea}</div>
-            <div className='all-products'>{ProductsCardArea}</div>
-           </AliceCarousel>
-          {SaleProductArea}
-          <div className='all-adding-cart'>
-            {AddToCartArea}
-            <div className='next-adding-cart'>{NextAddToCartArea}</div>
+    <div className='god-cont'>
+      <div className='menu-container'>
+          {productList}
+            < MainMenu /> 
+          <div className='carousel-adversting'>
+              {AdverstingCard}
           </div>
-          <div className='license-card-cont'>
-            {LicenseCardArea}
-            {LicenseCardArea2}
-            {LicenseCardArea3}
-          </div>
-          <AliceCarousel autoPlay autoPlayInterval="3000">
-            <div className='comment-card-area-cont'>
-              {CommentCardArea}
-              {CommentCardArea2}
-              {CommentCardArea3}
-            </div>
-            <div className='comment-card-area-cont'>
-              {CommentCardArea}
-              {CommentCardArea2}
-              {CommentCardArea3}
-            </div>
-            <div className='comment-card-area-cont'>
-              {CommentCardArea}
-              {CommentCardArea2}
-              {CommentCardArea3}
-            </div>
-          </AliceCarousel>
-          <div className='sponser-company-logo'>
-            {SponserCompanyArea}
-          </div>
-          <div className='latest-news-zone'>
-            {LatestNewsArea}
+          <div className='carousel-three-cards'>
             <AliceCarousel autoPlay autoPlayInterval="3000">
-              <div className='card-news-zone'>
-                {LatestNewsCardArea}  
-                {LatestNewsCardArea2}  
-              </div>
-              <div className='card-news-zone'>
-                {LatestNewsCardArea}  
-                {LatestNewsCardArea2}  
-              </div>
-              <div className='card-news-zone'>
-                {LatestNewsCardArea}  
-                {LatestNewsCardArea2}  
-              </div>
-              <div className='card-news-zone'>
-                {LatestNewsCardArea}  
-                {LatestNewsCardArea2}  
-              </div>
-              <div className='card-news-zone'>
-                {LatestNewsCardArea}  
-                {LatestNewsCardArea2}  
-              </div>
+              <div className='d-flex gap-4 j-content justify-content-center'>{AdverstingPopularCard}</div>
+              <div className='d-flex gap-4 j-content justify-content-center'>{AdverstingPopularCard}</div>
+              <div className='d-flex gap-4 j-content justify-content-center'>{AdverstingPopularCard}</div>
             </AliceCarousel>
           </div>
-          <div className='footer-zone'>
-            {FooterContactArea}
-            <div className='footer-bottom-zone'>
-              {FooterBottomArea}
-              {FooterTermsArea}
+            {PopularProductsArea}
+            <AliceCarousel autoPlay autoPlayInterval="3000">
+              <div className='all-products'>{ProductsCardArea}</div>
+              <div className='all-products'>{ProductsCardArea}</div>
+              <div className='all-products'>{ProductsCardArea}</div>
+            </AliceCarousel>
+            {SaleProductArea}
+            <div className='all-adding-cart'>
+              {AddToCartArea}
+              <div className='next-adding-cart'>{NextAddToCartArea}</div>
             </div>
-          </div>
-    </div>
+            <div className='license-card-cont'>
+              {LicenseCardArea}
+              {LicenseCardArea2}
+              {LicenseCardArea3}
+            </div>
+            <AliceCarousel autoPlay autoPlayInterval="3000">
+              <div className='comment-card-area-cont'>
+                {CommentCardArea}
+                {CommentCardArea2}
+                {CommentCardArea3}
+              </div>
+              <div className='comment-card-area-cont'>
+                {CommentCardArea}
+                {CommentCardArea2}
+                {CommentCardArea3}
+              </div>
+              <div className='comment-card-area-cont'>
+                {CommentCardArea}
+                {CommentCardArea2}
+                {CommentCardArea3}
+              </div>
+            </AliceCarousel>
+            <div className='sponser-company-logo'>
+              {SponserCompanyArea}
+            </div>
+            <div className='latest-news-zone'>
+              {LatestNewsArea}
+              <AliceCarousel autoPlay autoPlayInterval="3000">
+                <div className='card-news-zone'>
+                  {LatestNewsCardArea}  
+                  {LatestNewsCardArea2}  
+                </div>
+                <div className='card-news-zone'>
+                  {LatestNewsCardArea}  
+                  {LatestNewsCardArea2}  
+                </div>
+                <div className='card-news-zone'>
+                  {LatestNewsCardArea}  
+                  {LatestNewsCardArea2}  
+                </div>
+                <div className='card-news-zone'>
+                  {LatestNewsCardArea}  
+                  {LatestNewsCardArea2}  
+                </div>
+                <div className='card-news-zone'>
+                  {LatestNewsCardArea}  
+                  {LatestNewsCardArea2}  
+                </div>
+              </AliceCarousel>
+            </div>
+            <div className='footer-zone'>
+              {FooterContactArea}
+              <div className='footer-bottom-zone'>
+                {FooterBottomArea}
+                {FooterTermsArea}
+              </div>
+            </div>
+      </div>
+      </div>
   )
 }
 export default App;

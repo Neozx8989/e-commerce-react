@@ -40,7 +40,7 @@ function AdverstingFunc(props) {
         </div>
         <div className="adversting-area">
             <div className="left-area">
-                <h1>PS5 gamehand</h1>
+                <h1>PS5 controler</h1>
                 <div className="shopview">
                     <button>{props.buttonshop}</button>
                     <button>{props.buttonview}</button>
@@ -60,13 +60,13 @@ function AdverstingFunc(props) {
         </div>
         <div className="adversting-area">
             <div className="left-area">
-                <h1>Iphone 13 Pro Max</h1>
+                <h1>Iphone 14 Pro</h1>
                 <div className="shopview">
                     <button>{props.buttonshop}</button>
                     <button>{props.buttonview}</button>
                 </div>
             </div>
-            <img src='https://assets.stickpng.com/images/61d2f85b92b57c0004c64745.png' alt="Canon camera" />
+            <img src='https://m.media-amazon.com/images/I/71MIxZaKqgL.jpg' alt="Canon camera" />
         </div>
         </AliceCarousel>
     )
