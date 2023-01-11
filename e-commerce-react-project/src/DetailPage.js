@@ -4,9 +4,8 @@ import AliceCarousel from 'react-alice-carousel'
 import ProductFunc from './Product';
 import products from './Api';
 import MainMenu from './components/MainMenu';
-import  Adversting from './data/AdverstinPopular';
-import AdverstingFunc from './components/AdverstingPopular';
-
+import {detailPageMenuData , productDetailData , customerReviewsData , relatesProductData} from './data/detail-page-data/detailPage'
+import { DetailPageMenu , ProductDetail , CustomerReviews , RelatesProduct } from './components/detail-page-component/DetailPage';
 import { FooterContactData, FooterBottomData, FooterTermsData } from './data/Footer';
 import { FooterFunc, FooterBottomFunc, FooterTermsFunc } from './components/FooterFunc';
 
@@ -21,14 +20,20 @@ function DetailPageApp() {
     />
   })
 
-  const AdverstingCard = Adversting.map((advers) => {
-    return <AdverstingFunc
-      title={advers.title}
-      buttonshop={advers.buttonshop}
-      buttonview={advers.buttonview}
-      adverstingImageUrl={advers.adverstingImageUrl}
-    />
-  })
+
+const PageMenuArea = detailPageMenuData.map((menu) => {
+  return <DetailPageMenu 
+    name={menu.name}
+    category={menu.category}
+  />
+})
+
+const ProductDetailArea = productDetailData.map((product) => {
+  return <ProductDetail 
+    productImage={product.productImage}
+    addbutton={product.addbutton}
+  />
+})
 
   const FooterContactArea = FooterContactData.map((info) => {
     return <FooterFunc
@@ -61,10 +66,15 @@ function DetailPageApp() {
       <div className='menu-container'>
         {productList}
         < MainMenu />
-        <div className='carousel-adversting'>
-          {AdverstingCard}
-        </div>
-       
+
+      <div className='page-menu'>
+        {PageMenuArea}
+      </div>
+
+      <div className='product-detail-area'>
+          {ProductDetailArea}
+      </div>
+
         <div className='footer-zone'>
           {FooterContactArea}
           <div className='footer-bottom-zone'>

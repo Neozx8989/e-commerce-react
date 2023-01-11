@@ -1,13 +1,16 @@
 const LicensesData = [
     {
+        icon: <i class="bi bi-box-fill"></i>,
         title: 'Free delivery',
         price: 'on order above $50,00',
     },
     {
+        icon: <i class="fa-sharp fa-solid fa-crown"></i>,
         title: 'Best quality',
         price: 'best quality in low price',
     },
     {
+        icon: <i class="bi bi-shield-lock-fill"></i>,
         title: '1 year warranty',
         price: 'Available warranty',
     },

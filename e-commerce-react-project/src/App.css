@@ -5,6 +5,7 @@
     font-family: 'Poppins', sans-serif;
 }
 
+
 .container-text {
     display: flex;              
     justify-content: space-between;
@@ -13,7 +14,7 @@
     width: 1440px;
     margin: 0 auto;
     padding: 22.5px 61px;
-    
+    background-color: white;
 }
 
 .container-header-right-text {
@@ -266,7 +267,7 @@ i {
     padding: 9.8px 16px;
     display: flex;
     justify-content: space-between;
-    align-items: flex-end;
+    align-items: stretch;
 }
 
 .products-card-area h4 {
@@ -279,10 +280,6 @@ i {
     font-size: 17px;
     font-weight: 600;
     color: #4a4a4a;
-}
-
-.products-card-area p {
-    font-size: 20px;
 }
 
 .all-products {

@@ -1,5 +1,7 @@
 import './App.css';
 import AliceCarousel from 'react-alice-carousel'
+import { useState } from "react"
+import { Rating } from 'react-simple-star-rating';
 
 import ProductFunc from './Product';
 import products from './Api';
@@ -99,6 +101,7 @@ function App() {
 
   const LicenseCardArea = LicensesData.map((product) => {
     return <LicenseCardFunc
+      icon={product.icon}
       title={product.title}
       price={product.price}
     />
