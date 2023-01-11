@@ -751,3 +751,19 @@ i {
     width: 52px;
 }
 
+/* Detail page ************* */
+.detail-page-menu{
+    display: flex;
+    gap: 54px;
+    background-color: #fdfdfe;
+    width: 1440px;
+    margin: 0 auto;
+    padding: 26px 63px;
+}
+
+.detail-page-menu a {
+    text-decoration: none;
+    color: #3a3a3a;
+    font-weight: 500;
+    font-size: 16px;
+}

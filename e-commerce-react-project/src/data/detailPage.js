@@ -7,8 +7,8 @@ const detailPageMenuData = [
 
 const productDetailData = [
     {
-        productImage:'public/images/detailpage-product/greenxboxcontroler.png',
-        moreProductImage:'',
+        productImage:'images/green-controler.png',
+        moreProductImage:'images/black-controler.png',
         name:'Play game',
         status:`Availability ${<i class="bi bi-check-lg"></i>} in stock`,
         stock:'Hurry up! only 34 product left in stock!',
