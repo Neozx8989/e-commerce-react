@@ -110,6 +110,9 @@ function ProductsCardFunc(props) {
             {values.map((v, idx) => (
                 <div key={idx} onClick={() => handleShow(v)}>
                     <img src={props.productImageUrl} alt="canon camera" />
+                    {typeof v === 'string' && `below ${v.split('-')[0]}`}
+                </div>
+            ))}
                     <div className="product-info">
                         <div>
                             <h4>{props.title}</h4>
@@ -120,9 +123,6 @@ function ProductsCardFunc(props) {
                         </div>
                         <div className='basket-add'>{props.basket}</div>
                     </div>
-                    {typeof v === 'string' && `below ${v.split('-')[0]}`}
-                </div>
-            ))}
             <Modal show={show} fullscreen={fullscreen} onHide={() => setShow(false)}>
             <Modal.Header closeButton>
             </Modal.Header>
