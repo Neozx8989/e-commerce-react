@@ -1,6 +1,9 @@
 import AliceCarousel from 'react-alice-carousel'
 import { useState } from "react"
 import { Rating } from 'react-simple-star-rating'
+import Button from 'react-bootstrap/Button';
+import Modal from 'react-bootstrap/Modal';
+import { detailPageMenuData } from '../data/detail-page-data/detailPage';
 
 function AdverstingPopularFunc(props) {
     return (
@@ -90,20 +93,40 @@ function PopularProductsFunc(props) {
     )
 }
 
+
+
 function ProductsCardFunc(props) {
+    const values = [true];
+    const [fullscreen, setFullscreen] = useState(true);
+    const [show, setShow] = useState(false);
+
+    function handleShow(breakpoint) {
+        setFullscreen(breakpoint);
+        setShow(true);
+    }
+
     return (
         <div className="products-card-area">
-            <img src={props.productImageUrl} alt="canon camera" />
-            <div className="product-info">
-                <div>
-                    <h4>{props.title}</h4>
-                    <h5>{props.price}</h5>
-                    <Rating>
-                        <p className="icons"></p>
-                    </Rating>
+            {values.map((v, idx) => (
+                <div key={idx} onClick={() => handleShow(v)}>
+                    <img src={props.productImageUrl} alt="canon camera" />
+                    <div className="product-info">
+                        <div>
+                            <h4>{props.title}</h4>
+                            <h5>{props.price}</h5>
+                            <Rating>
+                                <p className="icons"></p>
+                            </Rating>
+                        </div>
+                        <div className='basket-add'>{props.basket}</div>
+                    </div>
+                    {typeof v === 'string' && `below ${v.split('-')[0]}`}
                 </div>
-                <div className='basket-add'>{props.basket}</div>
-            </div>
+            ))}
+            <Modal show={show} fullscreen={fullscreen} onHide={() => setShow(false)}>
+            <Modal.Header closeButton>
+            </Modal.Header>
+            </Modal>
         </div>
     )
 }
