@@ -113,6 +113,10 @@ i {
    justify-content: space-evenly;
 }
 
+.products-card img {
+    height: 118px;
+}
+
 
 .product-card-text h1{
     font-size: 22.38px;
@@ -261,6 +265,14 @@ i {
 .products-card-area img {
     padding: 16.34px 40.39px;
     border-radius: 20px;
+}
+
+.products-card-area button {
+    background-color: #eda415;
+    color: white;
+    border: none;
+    padding: 10px 13px;
+    border-radius: 50%;
 }
 
 .product-info {
@@ -726,28 +738,3 @@ i {
 }
 
 /* Three card carousel slider */
-.god-cont 
-.carousel-three-cards
-.alice-carousel__dots-item:not(.__custom) {
-  display: none;
-}
-
-.god-cont
-.carousel-three-cards
-.alice-carousel__prev-btn {
-    background-color: #EAEAEA;
-    border-radius: 50%;
-    text-align: center;
-    width: 52px;
-}
-
-
-.god-cont
-.carousel-three-cards
-.alice-carousel__next-btn {
-    background-color: #EAEAEA;
-    border-radius: 50%;
-    text-align: center;
-    width: 52px;
-}
-

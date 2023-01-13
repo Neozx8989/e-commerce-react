@@ -1,4 +1,3 @@
-
 function DetailPageMenu(props){
     return (
         <div className="detail-page-menu">

@@ -5,6 +5,7 @@ import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
 import { detailPageMenuData } from '../data/detail-page-data/detailPage';
 
+
 function AdverstingPopularFunc(props) {
     return (
         <div className="product-area">
@@ -22,26 +23,26 @@ function AdverstingPopularFunc(props) {
 
 function AdverstingFunc(props) {
     return (
-        <AliceCarousel autoPlay autoPlayInterval="3000">
+        <AliceCarousel autoPlay autoPlayInterval="5000">
             <div className="adversting-area">
                 <div className="left-area">
-                    <h1>{props.title}</h1>
+                    <h1>Iphone 13 Case</h1>
                     <div className="shopview">
                         <button>{props.buttonshop}</button>
                         <button>{props.buttonview}</button>
                     </div>
                 </div>
-                <img src={props.adverstingImageUrl} alt="Canon camera" />
+                <img src="http://cdn.shopify.com/s/files/1/0037/7798/6630/products/71613lct0PL._SL1500_9725f828-f9f0-4678-928d-9f06f522f217.jpg?v=1673089567" alt="Canon camera" />
             </div>
             <div className="adversting-area">
                 <div className="left-area">
-                    <h1>Sony Camera</h1>
+                    <h1>Canon CDN 300</h1>
                     <div className="shopview">
                         <button>{props.buttonshop}</button>
                         <button>{props.buttonview}</button>
                     </div>
                 </div>
-                <img src="https://pngimg.com/d/video_camera_PNG7854.png" alt="Canon camera" />
+                <img src="https://i1.adis.ws/i/canon/cr-n300-bk-frt-04_full-ptz-range_02_ff9db74d048540108262c426a3ad2678" alt="Canon camera" />
             </div>
             <div className="adversting-area">
                 <div className="left-area">
@@ -51,17 +52,17 @@ function AdverstingFunc(props) {
                         <button>{props.buttonview}</button>
                     </div>
                 </div>
-                <img src='https://www.pngall.com/wp-content/uploads/5/PS5-Controller-PNG-Image.png' alt="Canon camera" />
+                <img src='https://cdn.shopify.com/s/files/1/2231/0539/products/PlayStation-5-DualSense-PS5-Custom-Controller-Hyper-Space-Edition_700x700.png?v=1657532806' alt="Canon camera" />
             </div>
             <div className="adversting-area">
                 <div className="left-area">
-                    <h1>Head Phone</h1>
+                    <h1>Apple AirPods Max</h1>
                     <div className="shopview">
                         <button>{props.buttonshop}</button>
                         <button>{props.buttonview}</button>
                     </div>
                 </div>
-                <img src='https://www.freepnglogos.com/uploads/headphones-png/headphones-hublot-and-monster-announce-inspiration-hublot-luxury-35.png' alt="Canon camera" />
+                <img src='https://ph-test-11.slatic.net/p/75fa70a12d52a377665d93c4bc210fee.jpg' alt="Canon camera" />
             </div>
             <div className="adversting-area">
                 <div className="left-area">
@@ -105,6 +106,12 @@ function ProductsCardFunc(props) {
         setShow(true);
     }
 
+    function handleCart(){
+        props.setWishlist(props.wishlist + 1)
+        console.log(props.wishlist)
+
+    }
+
     return (
         <div className="products-card-area">
             {values.map((v, idx) => (
@@ -113,20 +120,31 @@ function ProductsCardFunc(props) {
                     {typeof v === 'string' && `below ${v.split('-')[0]}`}
                 </div>
             ))}
-                    <div className="product-info">
-                        <div>
-                            <h4>{props.title}</h4>
-                            <h5>{props.price}</h5>
-                            <Rating>
-                                <p className="icons"></p>
-                            </Rating>
-                        </div>
-                        <div className='basket-add'>{props.basket}</div>
-                    </div>
-            <Modal show={show} fullscreen={fullscreen} onHide={() => setShow(false)}>
-            <Modal.Header closeButton>
-            </Modal.Header>
-            </Modal>
+            <div className="product-info">
+                <div>
+                    <h4>{props.title}</h4>
+                    <h5>{props.price}</h5>
+                    <Rating>
+                        <p className="icons"></p>
+                    </Rating>
+                </div>
+                <div className='basket-add'>
+                    <button onClick={handleCart}>
+                        {props.basket}
+                    </button>
+                 
+                </div>
+            </div>
+
+
+
+
+            {/* <Modal show={show} fullscreen={fullscreen} onHide={() => setShow(false)}>
+                <Modal.Header closeButton>
+
+                </Modal.Header>
+            </Modal> */}
+
         </div>
     )
 }

@@ -17,8 +17,8 @@ function ProductFunc(props){
               </div>
               <div className="sign-in">
                 <p><i class="bi bi-person"></i> {props.signin}</p> 
-                <p><i class="bi bi-heart"></i> <i class="bi bi-0-circle-fill text-warning"></i></p>
-                <p><i class="bi bi-cart3"></i> <i class="bi bi-0-circle-fill text-warning" ></i></p>
+                <p><i class="bi bi-heart"></i>{props.wishlist}</p>
+                <p><i class="bi bi-cart3"></i>{props.wishlist}</p>
               </div>
             </nav>
           <div className="nav-items"></div>
