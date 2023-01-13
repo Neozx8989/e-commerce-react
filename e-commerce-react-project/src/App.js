@@ -22,6 +22,8 @@ import { FooterContactData, FooterBottomData, FooterTermsData } from './data/Foo
 import { FooterFunc, FooterBottomFunc, FooterTermsFunc } from './components/FooterFunc';
 
 function App() {
+  const [wishlist , setWishlist] = useState(0)
+
   const productList = products.map((product) => {
     return <ProductFunc
       helpus={product.helpus}
@@ -29,6 +31,8 @@ function App() {
       truck={product.truck}
       signin={product.signin}
       logoImageUrl={product.logoImageUrl}
+      wishlist={wishlist}
+      wishlisticon={product.wishlisticon}
     />
   })
 
@@ -67,6 +71,8 @@ function App() {
       price={product.price}
       rating={product.rating}
       basket={product.basket}
+      wishlist={wishlist}
+      setWishlist={setWishlist}
     />
   })
 
