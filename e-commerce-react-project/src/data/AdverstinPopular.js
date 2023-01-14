@@ -14,7 +14,21 @@ const AdverstingPopular = [
         title:'Spigen Pro',
         item:'(6 items)',
     },
-    
+     {
+        productImageUrl:'https://m.media-amazon.com/images/I/514kwqywgJL._AC_SL1024_.jpg',
+        title:'MakBook 13',
+        item:'(6 items)',
+    },
+    {
+        productImageUrl:'https://images.macrumors.com/t/Au-OUIb73hHvx2w8CirAir5bNbM=/1600x/article-new/2013/09/macbook-air-m2-roundup-header.png',
+        title:'Makbook',
+        item:'(6 items)',
+    },
+    {
+        productImageUrl:'https://m.media-amazon.com/images/I/41Tf8romNZL.__AC_SY300_SX300_QL70_ML2_.jpg',
+        title:'iMac 27',
+        item:'(6 items)',
+    },
     
 ]
 

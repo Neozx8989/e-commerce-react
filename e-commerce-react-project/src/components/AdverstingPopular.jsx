@@ -4,10 +4,22 @@ import { Rating } from 'react-simple-star-rating'
 import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
 import { detailPageMenuData } from '../data/detail-page-data/detailPage';
+import Carousel from 'react-multi-carousel';
+import 'react-multi-carousel/lib/styles.css';
 
 
 function AdverstingPopularFunc(props) {
+    const CustomRightArrow = ({ onClick, ...rest }) => {
+  const {
+    onMove,
+    state: { currentSlide, deviceType },
+  } = rest;
+  // onMove means if dragging or swiping in progress.
+  return <button onClick={() => onClick()} />;
+};
+
     return (
+        
         <div className="product-area">
             <div className="products-card">
                 <img src={props.productImageUrl} alt="Speaker" />
@@ -17,7 +29,6 @@ function AdverstingPopularFunc(props) {
                 </div>
             </div>
         </div>
-
     )
 }
 
