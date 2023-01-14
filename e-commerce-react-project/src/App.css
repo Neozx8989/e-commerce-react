@@ -712,6 +712,20 @@ i {
 }
 
 /* CAROUSEL CSS STYLE ZONE*/
+.god-cont
+.carousel-adversting
+.alice-carousel__dots-item:not(.__custom):not(:last-child) {
+    margin-right: 8px;
+}
+
+.god-cont
+.carousel-adversting
+.alice-carousel__dots {
+    list-style: none;
+    text-align: start;
+    margin-left: 580px;
+}
+
 .god-cont 
 .carousel-adversting
 .alice-carousel__dots  
@@ -719,6 +733,8 @@ i {
 .alice-carousel__dots-item:not(.__custom).__active {
     background-color: rgb(255, 163, 35);
 }
+
+
 
 
 
@@ -738,3 +754,9 @@ i {
 }
 
 /* Three card carousel slider */
+ .carousel-three-cards {
+    display: flex;
+    gap: 40px;
+    width: 1222px;
+    margin: 0 auto;
+}
