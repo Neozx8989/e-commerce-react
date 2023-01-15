@@ -8,13 +8,15 @@ import 'bootstrap/dist/css/bootstrap.min.css'
 import 'bootstrap-icons/font/bootstrap-icons.css'
 import 'react-bootstrap/Button'
 import "react-alice-carousel/lib/alice-carousel.css";
+import SignUpJs from './SignUpMain';
 
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App />
+    <SignUpJs />
+    {/* <App /> */}
     {/* <DetailPageApp/> */}
   </React.StrictMode>
 );
