@@ -1,11 +1,13 @@
 import { useState } from "react";
+import { Outlet, Link } from "react-router-dom";
 
 export default function SignUpFunc(props) {
     const [users , setUsers] = useState([]);
     function handleRegister(event) {
         event.preventDefault();
         console.log(event.target.firstname.value)
-        console.log(event.target.lastname.value)
+        console.log(event.target.email.value)
+        console.log(event.target.password.value)
         console.log(users)
       
         const user = {
@@ -36,7 +38,7 @@ export default function SignUpFunc(props) {
             <button>{props.button}</button>
         </div>
         <div className="have-acc">
-        <p>{props.ask}</p><a href="#">{props.login}</a>
+        <p>{props.ask}</p><Link to={"#"}>{props.login}</Link>
         </div>
       </form>
     </div>

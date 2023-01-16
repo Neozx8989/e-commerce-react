@@ -1,11 +1,11 @@
 import './App.css';
-import AliceCarousel from 'react-alice-carousel'
+import './DetailPage.css'
 
-import ProductFunc from './Product';
+import ProductFunc from './components/Product';
 import products from './Api';
 import MainMenu from './components/MainMenu';
-import {detailPageMenuData , productDetailData , customerReviewsData , relatesProductData} from './data/detail-page-data/detailPage'
-import { DetailPageMenu , ProductDetail , CustomerReviews , RelatesProduct } from './components/detail-page-component/DetailPage';
+import { detailPageMenuData, productDetailData } from './data/detail-page-data/detailPage'
+import { DetailPageMenu, ProductDetail } from './components/detail-page-component/DetailPage';
 import { FooterContactData, FooterBottomData, FooterTermsData } from './data/Footer';
 import { FooterFunc, FooterBottomFunc, FooterTermsFunc } from './components/FooterFunc';
 
@@ -21,19 +21,22 @@ function DetailPageApp() {
   })
 
 
-const PageMenuArea = detailPageMenuData.map((menu) => {
-  return <DetailPageMenu 
-    name={menu.name}
-    category={menu.category}
-  />
-})
+  const PageMenuArea = detailPageMenuData.map((menu) => {
+    return <DetailPageMenu
+      name={menu.name}
+      category={menu.category}
+    />
+  })
 
-const ProductDetailArea = productDetailData.map((product) => {
-  return <ProductDetail 
-    productImage={product.productImage}
-    addbutton={product.addbutton}
-  />
-})
+  const ProductDetailArea = productDetailData.map((product) => {
+    return <ProductDetail
+      productImage={product.productImage}
+      name={product.name}
+      status={product.status}
+      price={product.price}
+      addbutton={product.addbutton}
+    />
+  })
 
   const FooterContactArea = FooterContactData.map((info) => {
     return <FooterFunc
@@ -67,13 +70,10 @@ const ProductDetailArea = productDetailData.map((product) => {
         {productList}
         < MainMenu />
 
-      <div className='page-menu'>
-        {PageMenuArea}
-      </div>
-
-      <div className='product-detail-area'>
-          {ProductDetailArea}
-      </div>
+        <div className='page-menu'>
+          {PageMenuArea}
+        </div>
+        <div className='product-detail-area'> {ProductDetailArea}</div>
 
         <div className='footer-zone'>
           {FooterContactArea}
