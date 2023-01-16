@@ -1,10 +1,11 @@
 import React from 'react'
 import SubMenu from './SubMenu'
-import Navbar from 'react-bootstrap/Navbar'
 import menus from '../data/menus'
-import BrowseCategories from './BrowseCategories'
+
 
 export default function MainMenu(){
+
+    
 
     const subMenus = menus.map(subMenu => {
         return(

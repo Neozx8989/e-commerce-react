@@ -1,11 +1,6 @@
 import AliceCarousel from 'react-alice-carousel'
 import { useState } from "react"
 import { Rating } from 'react-simple-star-rating'
-import Button from 'react-bootstrap/Button';
-import Modal from 'react-bootstrap/Modal';
-import { detailPageMenuData } from '../data/detail-page-data/detailPage';
-import Carousel from 'react-multi-carousel';
-import 'react-multi-carousel/lib/styles.css';
 
 
 function AdverstingPopularFunc(props) {

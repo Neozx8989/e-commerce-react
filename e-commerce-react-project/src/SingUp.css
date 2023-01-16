@@ -1,0 +1,76 @@
+/*  SIGN UPP ZONE  */
+
+.SignUpContainer {
+    padding: 166.5px 204.5px;
+    width: 769px;
+    height: 799px;
+    margin: 0 auto;
+}
+
+.SignUpContainer h1 {
+    font-weight: 600;
+    font-size: 30px;
+    color: #101828;
+}
+
+.SignUpContainer form {
+    width: 360px;
+    height: 466px;
+    margin: 0 auto;
+    margin-top: 32px;
+}
+
+.SignUpContainer form input {
+    padding: 10px 14px;
+    border: none;
+    border: 1px solid #D0D5DD;
+    width: 360px;
+    border-radius: 8px;
+}
+
+.SignUpContainer form button {
+    border: none;
+    padding: 10px;
+    width: 360px;
+    background-color: #7F56D9;
+    color: white;
+    font-size: 16px;
+    font-weight: 600;
+    margin-top: 24px;
+    border-radius: 8px;
+    transition-duration: 250ms;
+}
+
+.SignUpContainer form button:hover {
+    border: none;
+    padding: 10px;
+    width: 360px;
+    background-color: #5f26db;
+    color: white;
+    font-size: 16px;
+    font-weight: 600;
+    margin-top: 24px;
+    border-radius: 8px;
+}
+
+.SignUpContainer .pass-title {
+    color: #667085;
+    font-weight: 400;
+    font-size: 14px;
+}
+
+.SignUpContainer .have-acc {
+    display: flex;
+    gap: 4px;
+    margin-top: 32px;
+    padding-left: 50px;
+}
+.SignUpContainer .have-acc a {
+    text-decoration: none;
+    color: #6941C6;
+    font-weight: 600;
+}
+
+.SignUpContainer .have-acc p {
+    color: #667085;
+}
