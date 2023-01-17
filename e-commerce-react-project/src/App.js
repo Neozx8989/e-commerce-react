@@ -1,8 +1,10 @@
 import "./App.css";
-import {BrowsRoute, Routes, Route, Link} from 'react-router-dom'
+import {Routes, Route} from 'react-router-dom'
 import Home from "./home/Home";
 import SignUpJs from "./signup/SignUpMain";
 import Navigation from "./navigation-header/Navigation";
+import DetailPageFunc from "./home/detailpage/DetailPageFunc";
+import DetailPageApp from "./home/detailpage/DetailPageApp";
 function App() {
   
   return (
@@ -11,6 +13,7 @@ function App() {
       <Routes>
         <Route path="signup" element={<SignUpJs/>}/>
         <Route path="home" element={<Home/>}/>
+        <Route path="detailpage" element={<DetailPageApp/>}/>
       </Routes>
     </div>
   );

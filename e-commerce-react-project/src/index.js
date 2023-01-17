@@ -8,9 +8,8 @@ import 'bootstrap/dist/css/bootstrap.min.css'
 import 'bootstrap-icons/font/bootstrap-icons.css'
 import 'react-bootstrap/Button'
 import "react-alice-carousel/lib/alice-carousel.css";
-import SignUpJs from './signup/SignUpMain';
 import { BrowserRouter } from 'react-router-dom'
-import Navigation from './navigation-header/Navigation';
+
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
