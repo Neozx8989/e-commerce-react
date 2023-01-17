@@ -1,8 +1,8 @@
-import './SingUp.css';
+import '../signup/SingUp.css';
 import { useState } from "react";
 
-import SignInData from './data/SignIn';
-import SignUpFunc from './components/sign-up';
+import SignInData from '../signup/SignIn';
+import SignUpFunc from '../signup/sign-up';
 
 function SignUpJs() {
 

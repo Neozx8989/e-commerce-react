@@ -1,6 +1,7 @@
 import AliceCarousel from 'react-alice-carousel'
 import { useState } from "react"
 import { Rating } from 'react-simple-star-rating'
+import {Link} from 'react-router-dom'
 
 
 function AdverstingPopularFunc(props) {
@@ -122,7 +123,7 @@ function ProductsCardFunc(props) {
         <div className="products-card-area">
             {values.map((v, idx) => (
                 <div key={idx} onClick={() => handleShow(v)}>
-                    <img src={props.productImageUrl} alt="canon camera" />
+                    <Link to={'detailpage'}><img src={props.productImageUrl}/></Link>
                     {typeof v === 'string' && `below ${v.split('-')[0]}`}
                 </div>
             ))}
