@@ -1,8 +1,9 @@
-import "./App.css";
+import "../App.css";
 import { useState } from "react";
-import ProductFunc from "./components/Product";
+import ProductFunc from "./Product";
 import products from "./Api";
-import MainMenu from "./components/MainMenu";
+import MainMenu from "./MainMenu";
+
 
 function Navigation() {
     const [wishlist, setWishlist] = useState(0);
@@ -25,7 +26,7 @@ function Navigation() {
         <div className="god-cont">
             <div className="menu-container">
                 {productList}
-                <MainMenu />
+                <MainMenu/>
             </div>
         </div>
     );

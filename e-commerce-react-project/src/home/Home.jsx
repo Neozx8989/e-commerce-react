@@ -1,21 +1,21 @@
-import "./App.css";
+import "../App.css";
 import AliceCarousel from "react-alice-carousel";
 import { useState } from "react";
 
-import { AdverstingPopular, Adversting, PopularProducts, ProductsCard,} from "./data/AdverstinPopular";
-import { AdverstingPopularFunc, AdverstingFunc, PopularProductsFunc, ProductsCardFunc,} from "./components/AdverstingPopular";
+import { AdverstingPopular, Adversting, PopularProducts, ProductsCard,} from "../home/data/AdverstinPopular";
+import { AdverstingPopularFunc, AdverstingFunc, PopularProductsFunc, ProductsCardFunc,} from "../home/AdverstingPopular";
 
-import { SaleLaptop, AddCarts, NextAddCarts } from "./data/AddCarts";
-import { SaleProductFunc, AddingToCarts, NextAddToCarts,} from "./components/AddToCarts";
+import { SaleLaptop, AddCarts, NextAddCarts } from "../home/data/AddCarts";
+import { SaleProductFunc, AddingToCarts, NextAddToCarts,} from "../home/AddToCarts";
 
 import { LicensesData, CommentCard } from "./data/Licenses";
-import { LicenseCardFunc, CommentCardFunc } from "./components/LicenseCard";
+import { LicenseCardFunc, CommentCardFunc } from "../home/LicenseCard";
 
-import { SponserData, LatestNewsData, NewsCardData } from "./data/LatestNews";
-import { SponsereFunc, LatestNewsFunc, LatestNewsCardFunc} from "./components/LatestNewsFunc";
+import { SponserData, LatestNewsData, NewsCardData } from "../home/data/LatestNews";
+import { SponsereFunc, LatestNewsFunc, LatestNewsCardFunc} from "../home/LatestNewsFunc";
 
-import { FooterContactData, FooterBottomData, FooterTermsData,} from "./data/Footer";
-import { FooterFunc, FooterBottomFunc,FooterTermsFunc,} from "./components/FooterFunc";
+import { FooterContactData, FooterBottomData, FooterTermsData,} from "../home/data/Footer";
+import { FooterFunc, FooterBottomFunc,FooterTermsFunc,} from "./FooterFunc";
 
 function Home() {
   const [wishlist, setWishlist] = useState(0);

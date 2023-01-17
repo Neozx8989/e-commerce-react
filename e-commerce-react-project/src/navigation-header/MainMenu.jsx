@@ -1,6 +1,5 @@
 import React from 'react'
-import SubMenu from './SubMenu'
-import {BrowsRoute, Routes, Route, Link} from 'react-router-dom'
+import {Link} from 'react-router-dom'
 
 export default function MainMenu() {
 

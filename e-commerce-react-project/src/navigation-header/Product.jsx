@@ -1,5 +1,5 @@
 import { Route, Routes, Link } from 'react-router-dom';
-import SignUpJs from '../SignUpMain';
+import SignUpJs from '../signup/SignUpMain';
 
 function ProductFunc(props) {
   return (

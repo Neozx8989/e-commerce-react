@@ -3,15 +3,14 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 
 import App from './App';
-import DetailPageApp from './DetailPage';
 import reportWebVitals from './reportWebVitals';
 import 'bootstrap/dist/css/bootstrap.min.css'
 import 'bootstrap-icons/font/bootstrap-icons.css'
 import 'react-bootstrap/Button'
 import "react-alice-carousel/lib/alice-carousel.css";
-import SignUpJs from './SignUpMain';
+import SignUpJs from './signup/SignUpMain';
 import { BrowserRouter } from 'react-router-dom'
-import Navigation from './Navigation';
+import Navigation from './navigation-header/Navigation';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
