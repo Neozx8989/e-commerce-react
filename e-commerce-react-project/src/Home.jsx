@@ -2,9 +2,6 @@ import "./App.css";
 import AliceCarousel from "react-alice-carousel";
 import { useState } from "react";
 
-import ProductFunc from "./components/Product";
-import products from "./Api";
-import MainMenu from "./components/MainMenu";
 import { AdverstingPopular, Adversting, PopularProducts, ProductsCard,} from "./data/AdverstinPopular";
 import { AdverstingPopularFunc, AdverstingFunc, PopularProductsFunc, ProductsCardFunc,} from "./components/AdverstingPopular";
 
@@ -22,20 +19,6 @@ import { FooterFunc, FooterBottomFunc,FooterTermsFunc,} from "./components/Foote
 
 function Home() {
   const [wishlist, setWishlist] = useState(0);
-
-  const productList = products.map((product) => {
-    return (
-      <ProductFunc
-        helpus={product.helpus}
-        store={product.store}
-        truck={product.truck}
-        signin={product.signin}
-        logoImageUrl={product.logoImageUrl}
-        wishlist={wishlist}
-        wishlisticon={product.wishlisticon}
-      />
-    );
-  });
 
   const AdverstingCard = Adversting.map((advers) => {
     return (
@@ -193,9 +176,6 @@ function Home() {
 
   return (
     <div className="god-cont">
-      <div className="menu-container">
-        {productList}
-        <MainMenu />
         <div className="carousel-adversting">{AdverstingCard}</div>
         <div className="carousel-three-cards">   
         <AliceCarousel>
@@ -229,7 +209,6 @@ function Home() {
             {FooterTermsArea}
           </div>
         </div>
-      </div>
     </div>
   );
 }

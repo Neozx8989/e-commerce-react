@@ -1,13 +1,18 @@
 import "./App.css";
-import {BrowsRoute} from 'react-router-dom'
+import {BrowsRoute, Routes, Route, Link} from 'react-router-dom'
 import Home from "./Home";
 import SignUpJs from "./SignUpMain";
+import Navigation from "./Navigation";
 function App() {
   
   return (
     <div>
-      <SignUpJs/>
-      {/* <Home/> */}
+      <Navigation/>
+
+    <Routes>
+      <Route path="signup" element={<SignUpJs/>}/>
+      <Route path="home" element={<Home/>}/>
+    </Routes>
     </div>
   );
 }

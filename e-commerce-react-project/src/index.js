@@ -10,13 +10,14 @@ import 'bootstrap-icons/font/bootstrap-icons.css'
 import 'react-bootstrap/Button'
 import "react-alice-carousel/lib/alice-carousel.css";
 import SignUpJs from './SignUpMain';
-import {BrowserRouter} from 'react-router-dom'
+import { BrowserRouter } from 'react-router-dom'
+import Navigation from './Navigation';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <BrowserRouter>
     <React.StrictMode>
-      <App/>
+      <App />
     </React.StrictMode>
   </BrowserRouter>
 );

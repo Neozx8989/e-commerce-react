@@ -60,9 +60,17 @@ nav {
     color: white;
 }
 
+.sign-in a {
+    text-decoration: none;
+    color: white;
+    font-weight: 400;
+    font-size: 14px;
+}
+
 i {
     font-size: 16px;
     cursor: pointer;
+    color: white;
 }
 
 .nav-items {
@@ -90,6 +98,28 @@ i {
     font-weight: 700;
     padding-top: 10px;
 }
+
+/* Submenu area  */
+
+
+.sub-menu {
+    display: flex;
+    gap: 69px;
+    margin-top: 23px;
+}
+
+.sub-menu a{
+   text-decoration: none;
+   font-weight: 500;
+   font-size: 16px;
+   color: #3A3A3A;
+}
+
+.sub-menu select{
+    border: none;
+    background-color: #F4F4F4;
+}
+
 
 .products-card-area img {
     height: 195px;

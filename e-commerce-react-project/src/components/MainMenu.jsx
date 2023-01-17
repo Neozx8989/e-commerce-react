@@ -1,23 +1,12 @@
 import React from 'react'
 import SubMenu from './SubMenu'
-import menus from '../data/menus'
+import {BrowsRoute, Routes, Route, Link} from 'react-router-dom'
 
+export default function MainMenu() {
 
-export default function MainMenu(){
-
-    
-
-    const subMenus = menus.map(subMenu => {
-        return(
-            <div className='nav-menus'>
-                <SubMenu title={subMenu.title} position={subMenu.position} children={subMenu.children} />
-            </div>
-        )
-    })
-
-    return(
+    return (
         <div className='navigation-menus'>
-           <div className='categories'>
+            <div className='categories'>
                 <select>
                     <option> Browse categories </option>
                     <option>apple</option>
@@ -26,8 +15,22 @@ export default function MainMenu(){
                     <option>canon</option>
                 </select>
             </div>
-           <div className='menu-items'>{subMenus}</div>    
-           <p className='free'>30 Days Free Return</p>
+                <div className='sub-menu'>
+                    <Link to={'home'}>Home</Link>
+                    <Link to={''}>
+                        <select>
+                            <option>Catalog</option>
+                        </select>
+                    </Link>
+                    <Link to={''}>Blog</Link>
+                    <Link to={''}>
+                        <select>
+                            <option>Pages</option>
+                        </select>
+                    </Link>
+                    <Link to={''}>About us</Link>
+                </div>
+            <p className='free'>30 Days Free Return</p>
         </div>
     )
 }
