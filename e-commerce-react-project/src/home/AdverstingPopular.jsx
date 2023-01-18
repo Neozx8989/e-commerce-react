@@ -2,6 +2,7 @@ import AliceCarousel from 'react-alice-carousel'
 import { useState } from "react"
 import { Rating } from 'react-simple-star-rating'
 import {Link} from 'react-router-dom'
+import DetailPageApp from './detailpage/DetailPageApp'
 
 function AdverstingPopularFunc(props) {
     

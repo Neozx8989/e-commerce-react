@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 import './DetailPage.css';
+=======
+import '../detailpage/DetailPage.css';
+>>>>>>> 4f45792d85c15bb52c509454f8581258f9daffc1
 import DetailPageData from './DetailPageData';
 import DetailPageFunc from './DetailPageFunc';
 
