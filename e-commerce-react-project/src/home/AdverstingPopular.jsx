@@ -4,22 +4,12 @@ import { Rating } from 'react-simple-star-rating'
 import {Link} from 'react-router-dom'
 import DetailPageApp from './detailpage/DetailPageApp'
 
-
 function AdverstingPopularFunc(props) {
-    const CustomRightArrow = ({ onClick, ...rest }) => {
-  const {
-    onMove,
-    state: { currentSlide, deviceType },
-  } = rest;
-  // onMove means if dragging or swiping in progress.
-  return <button onClick={() => onClick()} />;
-};
-
+    
     return (
-        
         <div className="product-area">
             <div className="products-card">
-                <img src={props.productImageUrl} alt="Speaker" />
+                <img src={props.productImageUrl} />
                 <div className="product-card-text">
                     <h1>{props.title}</h1>
                     <p>{props.item}</p>
@@ -27,7 +17,9 @@ function AdverstingPopularFunc(props) {
             </div>
         </div>
     )
-}
+};
+
+
 
 function AdverstingFunc(props) {
     return (

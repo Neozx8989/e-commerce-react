@@ -5,6 +5,10 @@
     font-family: 'Poppins', sans-serif;
 }
 
+.three-card {
+    display: flex;
+    gap: 20px;
+}
 
 .container-text {
     display: flex;              

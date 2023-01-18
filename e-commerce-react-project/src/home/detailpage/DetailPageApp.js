@@ -1,4 +1,4 @@
-import '../detailpage/DetailPage.css';
+import './DetailPage.css';
 import DetailPageData from './DetailPageData';
 import DetailPageFunc from './DetailPageFunc';
 

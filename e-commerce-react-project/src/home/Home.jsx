@@ -176,13 +176,18 @@ function Home() {
 
   return (
     <div className="god-cont">
-        <div className="carousel-adversting">{AdverstingCard}</div>
-        <div className="carousel-three-cards">   
-        <AliceCarousel>
-          {AdverstingPopularCard}
-        </AliceCarousel>
+        <div className="carousel-adversting">
+          {AdverstingCard}
         </div>
+        
+        <div className="carousel-three-cards">  
+          <AliceCarousel>
+            <div className="three-card">{AdverstingPopularCard}</div>
+          </AliceCarousel>  
+        </div>
+
         {PopularProductsArea}
+        
         <AliceCarousel autoPlay autoPlayInterval="3000">
           <div className="all-products">{ProductsCardArea}</div>
         </AliceCarousel>
