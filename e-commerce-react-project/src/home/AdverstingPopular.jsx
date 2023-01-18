@@ -3,22 +3,12 @@ import { useState } from "react"
 import { Rating } from 'react-simple-star-rating'
 import {Link} from 'react-router-dom'
 
-
 function AdverstingPopularFunc(props) {
-    const CustomRightArrow = ({ onClick, ...rest }) => {
-  const {
-    onMove,
-    state: { currentSlide, deviceType },
-  } = rest;
-  // onMove means if dragging or swiping in progress.
-  return <button onClick={() => onClick()} />;
-};
-
+    
     return (
-        
         <div className="product-area">
             <div className="products-card">
-                <img src={props.productImageUrl} alt="Speaker" />
+                <img src={props.productImageUrl} />
                 <div className="product-card-text">
                     <h1>{props.title}</h1>
                     <p>{props.item}</p>
@@ -26,7 +16,9 @@ function AdverstingPopularFunc(props) {
             </div>
         </div>
     )
-}
+};
+
+
 
 function AdverstingFunc(props) {
     return (
@@ -123,13 +115,13 @@ function ProductsCardFunc(props) {
         <div className="products-card-area">
             {values.map((v, idx) => (
                 <div key={idx} onClick={() => handleShow(v)}>
-                    <Link to={'detailpage'}><img src={props.productImageUrl}/></Link>
+                    <img src={props.productImageUrl}/>
                     {typeof v === 'string' && `below ${v.split('-')[0]}`}
                 </div>
             ))}
             <div className="product-info">
                 <div>
-                    <h4>{props.title}</h4>
+                <Link to={'detailpage'}><h4>{props.title}</h4></Link>
                     <h5>{props.price}</h5>
                     <Rating>
                         <p className="icons"></p>
