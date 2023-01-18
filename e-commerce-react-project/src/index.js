@@ -9,10 +9,6 @@ import 'bootstrap/dist/css/bootstrap.min.css'
 import 'bootstrap-icons/font/bootstrap-icons.css'
 import 'react-bootstrap/Button'
 import "react-alice-carousel/lib/alice-carousel.css";
-<<<<<<< HEAD
-=======
-import { BrowserRouter } from 'react-router-dom'
->>>>>>> 4f45792d85c15bb52c509454f8581258f9daffc1
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
