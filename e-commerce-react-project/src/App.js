@@ -10,8 +10,8 @@ function App() {
     <div>
       <Navigation/>
       <Routes>
-        <Route path="signup" element={<SignUpJs/>}/>
-        <Route path="home" element={<Home/>}/>
+        {/* <Route path="signup" element={<SignUpJs/>}/>
+        <Route path="home" element={<Home/>}/> */}
         <Route path="detailpage" element={<DetailPageApp/>}/>
       </Routes>
     </div>
