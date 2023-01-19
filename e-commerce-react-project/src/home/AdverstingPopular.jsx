@@ -116,13 +116,13 @@ function ProductsCardFunc(props) {
         <div className="products-card-area">
             {values.map((v, idx) => (
                 <div key={idx} onClick={() => handleShow(v)}>
-                    <img src={props.productImageUrl}/>
+                    <Link to={'/detailpage'}><img src={props.productImageUrl}/></Link>
                     {typeof v === 'string' && `below ${v.split('-')[0]}`}
                 </div>
             ))}
             <div className="product-info">
                 <div>
-                <Link to={'detailpage'}><h4>{props.title}</h4></Link>
+                <h4>{props.title}</h4>
                     <h5>{props.price}</h5>
                     <Rating>
                         <p className="icons"></p>

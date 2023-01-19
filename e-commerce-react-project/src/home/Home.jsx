@@ -14,8 +14,8 @@ import { LicenseCardFunc, CommentCardFunc } from "../home/LicenseCard";
 import { SponserData, LatestNewsData, NewsCardData } from "../home/data/LatestNews";
 import { SponsereFunc, LatestNewsFunc, LatestNewsCardFunc} from "../home/LatestNewsFunc";
 
-import { FooterContactData, FooterBottomData, FooterTermsData,} from "../home/data/Footer";
-import { FooterFunc, FooterBottomFunc,FooterTermsFunc,} from "./FooterFunc";
+import { FooterContactData, FooterBottomData, FooterTermsData,} from "../footer/Footer";
+import { FooterFunc, FooterBottomFunc,FooterTermsFunc,} from "../footer/FooterFunc";
 
 function Home() {
   const [wishlist, setWishlist] = useState(0);
