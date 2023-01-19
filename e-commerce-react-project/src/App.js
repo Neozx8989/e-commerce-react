@@ -4,7 +4,7 @@ import Home from "./home/Home";
 import SignUpJs from "./signup/SignUpMain";
 import Navigation from "./navigation-header/Navigation";
 import DetailPageApp from "./home/detailpage/DetailPageApp";
-import { FooterFunc } from "./footer/FooterFunc";
+import FooterApp from "./footer/FooterApp";
 function App() {
   
   return (
@@ -13,8 +13,9 @@ function App() {
       <Routes>
         <Route path="/signup" element={<SignUpJs/>}/>
         <Route path="/home" element={<Home/>}/>
-        <Route path="/detailpage/:id" element={<DetailPageApp/>}/>
-      </Routes>
+        <Route path="/detailpage" element={<DetailPageApp/>}/>
+      </Routes> 
+      <FooterApp/>
     </div>
   );
 }

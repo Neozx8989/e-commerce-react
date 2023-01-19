@@ -1,10 +1,11 @@
+import { Link } from 'react-router-dom';
 import { Rating } from 'react-simple-star-rating'
 
 export default function DetailPageFunc(props) {
   return (
     <div className="detail-page-area">
       <div className="detail-nav">
-        <a href="#">Home</a>
+        <Link to="/home">Home</Link>
         <a href="#">All category</a>
       </div>
       <div className="detail-products-area">
