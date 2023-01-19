@@ -14,9 +14,6 @@ import { LicenseCardFunc, CommentCardFunc } from "../home/LicenseCard";
 import { SponserData, LatestNewsData, NewsCardData } from "../home/data/LatestNews";
 import { SponsereFunc, LatestNewsFunc, LatestNewsCardFunc} from "../home/LatestNewsFunc";
 
-import { FooterContactData, FooterBottomData, FooterTermsData,} from "../home/data/Footer";
-import { FooterFunc, FooterBottomFunc,FooterTermsFunc,} from "./FooterFunc";
-
 function Home() {
   const [wishlist, setWishlist] = useState(0);
 
@@ -145,34 +142,6 @@ function Home() {
     );
   });
 
-  const FooterContactArea = FooterContactData.map((info) => {
-    return (
-      <FooterFunc
-        title={info.title}
-        email={info.email}
-        contactinfo={info.contactinfo}
-      />
-    );
-  });
-
-  const FooterBottomArea = FooterBottomData.map((info) => {
-    return (
-      <FooterBottomFunc logoImageUrl={info.logoImageUrl} street={info.street} />
-    );
-  });
-
-  const FooterTermsArea = FooterTermsData.map((info) => {
-    return (
-      <FooterTermsFunc
-        name={info.name}
-        product={info.product}
-        product2={info.product2}
-        product3={info.product3}
-        product4={info.product4}
-        product5={info.product5}
-      />
-    );
-  });
 
   return (
     <div className="god-cont">
@@ -206,13 +175,6 @@ function Home() {
           <AliceCarousel autoPlay autoPlayInterval="3000">
             <div className="card-news-zone">{LatestNewsCardArea}</div>
           </AliceCarousel>
-        </div>
-        <div className="footer-zone">
-          {FooterContactArea}
-          <div className="footer-bottom-zone">
-            {FooterBottomArea}
-            {FooterTermsArea}
-          </div>
         </div>
     </div>
   );

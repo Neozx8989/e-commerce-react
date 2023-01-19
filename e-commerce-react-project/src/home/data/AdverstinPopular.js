@@ -55,20 +55,23 @@ const PopularProducts = [
 
 const ProductsCard = [
     {
+        id:1,
         productImageUrl: 'images/popular-products/camera-1.png',
         title: 'Camera',
-        price: '$11.70',
+        price: '$21.70',
         basket: <i class="bi bi-cart-plus-fill"></i>,
         wishlist:<i class="bi bi-heart"></i>,
     },
     {
+        id:2,
         productImageUrl: 'images/popular-products/headphonesimp.png',
         title: 'Wireless headphones',
-        price: '$11.70',
+        price: '$18.70',
         basket: <i class="bi bi-cart-plus-fill"></i>,
         wishlist:<i class="bi bi-heart"></i>,
     },
     {
+        id:3,
         productImageUrl: 'images/popular-products/headphonesimp.png',
         title: 'Wireless headphones',
         price: '$11.70',
@@ -76,6 +79,7 @@ const ProductsCard = [
         wishlisticon:<i class="bi bi-heart"></i>,
     },
     {
+        id:4,
         productImageUrl: 'images/popular-products/xboxhandsimp.png',
         title: 'Play game',
         price: '$11.70',
@@ -83,6 +87,7 @@ const ProductsCard = [
         wishlisticon:<i class="bi bi-heart"></i>,
     },
     {
+        id:5,
         productImageUrl: 'images/popular-products/xboxhandsimp.png',
         title: 'Camera',
         price: '$11.70',
@@ -90,6 +95,7 @@ const ProductsCard = [
         wishlisticon:<i class="bi bi-heart"></i>,
     },
     {
+        id:6,
         productImageUrl: 'images/popular-products/samsun.png',
         title: 'Wireless headphones',
         price: '$11.70',
@@ -97,6 +103,7 @@ const ProductsCard = [
         wishlisticon:<i class="bi bi-heart"></i>,
     },
     {
+        id:7,
         productImageUrl: 'images/popular-products/xboxhandsimp.png',
         title: 'Wireless headphones',
         price: '$11.70',
@@ -104,6 +111,7 @@ const ProductsCard = [
         wishlisticon:<i class="bi bi-heart"></i>,
     },
     {
+        id:8,
         productImageUrl: 'images/popular-products/laptopsimp.png',
         title: 'Play game',
         price: '$11.70',

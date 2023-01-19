@@ -1,22 +1,26 @@
+import { Link } from 'react-router-dom';
+import { Rating } from 'react-simple-star-rating'
+
 export default function DetailPageFunc(props) {
   return (
     <div className="detail-page-area">
       <div className="detail-nav">
-        <a href="#">Home</a>
+        <Link to="/home">Home</Link>
         <a href="#">All category</a>
       </div>
       <div className="detail-products-area">
         <div className="product-image">
-        <img src={props.productImage} alt="Xbox-controler" />
-        <div className="other-product">
-          <img src={props.productImage2} alt="Xbox-controler" />
-          <img src={props.productImage2} alt="Xbox-controler" />
-        </div>
+          <img src={props.productImage} alt="Xbox-controler" />
+          <div className="other-product">
+            <img src={props.productImage2} alt="Xbox-controler" />
+            <img src={props.productImage2} alt="Xbox-controler" />
+          </div>
         </div>
 
         <div className="product-info-area">
           <h1>{props.name}</h1>
           <h5>{props.price}</h5>
+          <Rating></Rating> No reviews
           <p>Availability: {props.check} in stock</p>
           <p>Hurry up! only 34 product left in stock!</p>
           <hr />
@@ -35,7 +39,7 @@ export default function DetailPageFunc(props) {
             <div className="quant-button-area">
               <button>-</button>
               <button>1</button>
-              <button>-</button>
+              <button>+</button>
             </div>
           </p>
           <div className="button-area">
@@ -51,13 +55,13 @@ export default function DetailPageFunc(props) {
       </div>
       <div className="reviews-description">
         <div className="button-description-area">
-            <button>Description</button>
-            <button>Reviews</button>
+          <button>Description</button>
+          <button>Reviews</button>
         </div>
         <div className="customer-review-card">
-            <h1>Customer reviews</h1>
-            <p>No reviews yet</p>
-            <a href="#">Write a review</a>
+          <h1>Customer reviews</h1>
+          <p>No reviews yet</p>
+          <a href="#">Write a review</a>
         </div>
       </div>
     </div>
