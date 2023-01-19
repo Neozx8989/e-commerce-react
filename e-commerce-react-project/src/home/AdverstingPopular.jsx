@@ -122,7 +122,7 @@ function ProductsCardFunc(props) {
             ))}
             <div className="product-info">
                 <div>
-                <h4>{props.title}</h4>
+                    <Link to={`/detailpage/${props.id}`}> <h4>{props.title}</h4></Link>
                     <h5>{props.price}</h5>
                     <Rating>
                         <p className="icons"></p>

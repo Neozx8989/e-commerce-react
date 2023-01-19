@@ -13,9 +13,8 @@ function App() {
       <Routes>
         <Route path="/signup" element={<SignUpJs/>}/>
         <Route path="/home" element={<Home/>}/>
-        <Route path="/detailpage" element={<DetailPageApp/>}/>
+        <Route path="/detailpage/:id" element={<DetailPageApp/>}/>
       </Routes>
-    
     </div>
   );
 }
