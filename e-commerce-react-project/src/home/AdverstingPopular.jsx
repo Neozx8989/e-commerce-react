@@ -117,7 +117,7 @@ function ProductsCardFunc(props) {
   }
 
   function handleCart() {
-    props.setWishlist(props.wishlist + 1);
+    props.setWishlist(props.wishlist);
     console.log(props.wishlist);
   }
 

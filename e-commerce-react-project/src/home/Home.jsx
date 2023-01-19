@@ -1,21 +1,45 @@
 import "../App.css";
 import AliceCarousel from "react-alice-carousel";
-import { useState } from "react";
 
-import { AdverstingPopular, Adversting, PopularProducts, ProductsCard,} from "../home/data/AdverstinPopular";
-import { AdverstingPopularFunc, AdverstingFunc, PopularProductsFunc, ProductsCardFunc,} from "../home/AdverstingPopular";
+
+import {
+  AdverstingPopular,
+  Adversting,
+  PopularProducts,
+  ProductsCard,
+} from "../home/data/AdverstinPopular";
+
+import {
+  AdverstingPopularFunc,
+  AdverstingFunc,
+  PopularProductsFunc,
+  ProductsCardFunc,
+} from "../home/AdverstingPopular";
 
 import { SaleLaptop, AddCarts, NextAddCarts } from "../home/data/AddCarts";
-import { SaleProductFunc, AddingToCarts, NextAddToCarts,} from "../home/AddToCarts";
+
+import {
+  SaleProductFunc,
+  AddingToCarts,
+  NextAddToCarts,
+} from "../home/AddToCarts";
 
 import { LicensesData, CommentCard } from "./data/Licenses";
 import { LicenseCardFunc, CommentCardFunc } from "../home/LicenseCard";
 
-import { SponserData, LatestNewsData, NewsCardData } from "../home/data/LatestNews";
-import { SponsereFunc, LatestNewsFunc, LatestNewsCardFunc} from "../home/LatestNewsFunc";
+import {
+  SponserData,
+  LatestNewsData,
+  NewsCardData,
+} from "../home/data/LatestNews";
 
-function Home() {
-  const [wishlist, setWishlist] = useState(0);
+import {
+  SponsereFunc,
+  LatestNewsFunc,
+  LatestNewsCardFunc,
+} from "../home/LatestNewsFunc";
+
+function Home(props) {
 
   const AdverstingCard = Adversting.map((advers) => {
     return (
@@ -59,8 +83,8 @@ function Home() {
         price={product.price}
         rating={product.rating}
         basket={product.basket}
-        wishlist={wishlist}
-        setWishlist={setWishlist}
+        wishlist={props.wishlist}
+        setWishlist={props.setWishlist}
       />
     );
   });
@@ -142,40 +166,37 @@ function Home() {
     );
   });
 
-
   return (
     <div className="god-cont">
-        <div className="carousel-adversting">
-          {AdverstingCard}
-        </div>
-        
-        <div className="carousel-three-cards">  
-          <AliceCarousel>
-            <div className="three-card">{AdverstingPopularCard}</div>
-          </AliceCarousel>  
-        </div>
+      <div className="carousel-adversting">{AdverstingCard}</div>
 
-        {PopularProductsArea}
-        
-        <AliceCarousel autoPlay autoPlayInterval="3000">
-          <div className="all-products">{ProductsCardArea}</div>
+      <div className="carousel-three-cards">
+        <AliceCarousel>
+          <div className="three-card">{AdverstingPopularCard}</div>
         </AliceCarousel>
-        {SaleProductArea}
-        <div className="all-adding-cart">
-          {AddToCartArea}
-          <div className="next-adding-cart">{NextAddToCartArea}</div>
-        </div>
-        <div className="license-card-cont">{LicenseCardArea}</div>
+      </div>
+
+      {PopularProductsArea}
+
+      <AliceCarousel autoPlay autoPlayInterval="3000">
+        <div className="all-products">{ProductsCardArea}</div>
+      </AliceCarousel>
+      {SaleProductArea}
+      <div className="all-adding-cart">
+        {AddToCartArea}
+        <div className="next-adding-cart">{NextAddToCartArea}</div>
+      </div>
+      <div className="license-card-cont">{LicenseCardArea}</div>
+      <AliceCarousel autoPlay autoPlayInterval="3000">
+        <div className="comment-card-area-cont">{CommentCardArea}</div>
+      </AliceCarousel>
+      <div className="sponser-company-logo">{SponserCompanyArea}</div>
+      <div className="latest-news-zone">
+        {LatestNewsArea}
         <AliceCarousel autoPlay autoPlayInterval="3000">
-          <div className="comment-card-area-cont">{CommentCardArea}</div>
+          <div className="card-news-zone">{LatestNewsCardArea}</div>
         </AliceCarousel>
-        <div className="sponser-company-logo">{SponserCompanyArea}</div>
-        <div className="latest-news-zone">
-          {LatestNewsArea}
-          <AliceCarousel autoPlay autoPlayInterval="3000">
-            <div className="card-news-zone">{LatestNewsCardArea}</div>
-          </AliceCarousel>
-        </div>
+      </div>
     </div>
   );
 }

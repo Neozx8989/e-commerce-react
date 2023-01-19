@@ -21,7 +21,7 @@ export default function DetailPageFunc(props) {
           <h1>{props.name}</h1>
           <h5>{props.price}</h5>
           <Rating></Rating> No reviews
-          <p>Availability: {props.check} in stock</p>
+          <p className='p1'>Availability: <i class="bi bi-check2"></i> in stock</p>
           <p>Hurry up! only 34 product left in stock!</p>
           <hr />
           <p className="product-color">Color: </p>
@@ -49,8 +49,8 @@ export default function DetailPageFunc(props) {
           </div>
           <hr />
           <h6>Sku: 01133-9-9</h6>
-          <h6>Category: 20%off, 49% Alex remote</h6>
-          <h6>Share: Google Facebook What's up</h6>
+          <h6 className='category6'>Category: 20%off, 49% Alex remote</h6>
+          <h6 className='so6'>Share: <div className='social-icons'><i class="bi bi-google"></i><i class="bi bi-facebook"></i><i class="bi bi-whatsapp"></i></div></h6>
         </div>
       </div>
       <div className="reviews-description">

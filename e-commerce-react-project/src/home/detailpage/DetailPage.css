@@ -89,6 +89,10 @@
     border-radius: 32px;
 }
 
+.product-info-area .p1 {
+    margin-top: 36px;
+}
+
 .other-product {
     display: flex;
     gap: 25px;
@@ -140,4 +144,35 @@
     background-color: #003F62;
     color: white;
     padding: 5px 28px;
+}
+
+.product-info-area .bi-check2 {
+    color: #0bff00;
+}
+
+h6:first-child {
+    margin-top: 15px;
+}
+
+.category6 {
+    margin-top: 31px;
+}
+
+.so6 {
+    display: flex;
+    gap: 21px;
+    margin-top: 31px;
+}
+
+.social-icons {
+    display: flex;
+    gap: 41.2px;
+}
+
+.social-icons i {
+    color: black;
+}
+
+.product-color {
+    margin-top: 40px;
 }
