@@ -6,13 +6,16 @@ import Navigation from "./navigation-header/Navigation";
 import DetailPageApp from "./home/detailpage/DetailPageApp";
 import FooterApp from "./footer/FooterApp";
 import { useState } from "react";
+import CreateAccApp from "./create-account/CreateAccApp";
 function App() {
   const [wishlist, setWishlist] = useState([]);
   return (
     <div>
       <Navigation wishlist={wishlist} setWishlist={setWishlist}/>
       <Routes>
+        <Route path="/createaccount" element={<CreateAccApp/>}/>
         <Route path="/signup" element={<SignUpJs/>}/>
+        <Route path="/" element={<SignUpJs/>}/>
         <Route path="/home" element={<Home/>}/>
         <Route path="/detailpage" element={<DetailPageApp/>}/>
       </Routes> 

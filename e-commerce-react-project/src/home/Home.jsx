@@ -1,7 +1,6 @@
 import "../App.css";
 import AliceCarousel from "react-alice-carousel";
 
-
 import {
   AdverstingPopular,
   Adversting,
@@ -40,7 +39,6 @@ import {
 } from "../home/LatestNewsFunc";
 
 function Home(props) {
-
   const AdverstingCard = Adversting.map((advers) => {
     return (
       <AdverstingFunc
@@ -173,12 +171,16 @@ function Home(props) {
       <div className="carousel-three-cards">
         <AliceCarousel>
           <div className="three-card">{AdverstingPopularCard}</div>
+          <div className="three-card">{AdverstingPopularCard}</div>
+          <div className="three-card">{AdverstingPopularCard}</div>
         </AliceCarousel>
       </div>
-
+      
       {PopularProductsArea}
 
       <AliceCarousel autoPlay autoPlayInterval="3000">
+        <div className="all-products">{ProductsCardArea}</div>
+        <div className="all-products">{ProductsCardArea}</div>
         <div className="all-products">{ProductsCardArea}</div>
       </AliceCarousel>
       {SaleProductArea}
@@ -189,11 +191,16 @@ function Home(props) {
       <div className="license-card-cont">{LicenseCardArea}</div>
       <AliceCarousel autoPlay autoPlayInterval="3000">
         <div className="comment-card-area-cont">{CommentCardArea}</div>
+        <div className="comment-card-area-cont">{CommentCardArea}</div>
+        <div className="comment-card-area-cont">{CommentCardArea}</div>
       </AliceCarousel>
       <div className="sponser-company-logo">{SponserCompanyArea}</div>
       <div className="latest-news-zone">
         {LatestNewsArea}
         <AliceCarousel autoPlay autoPlayInterval="3000">
+          <div className="card-news-zone">{LatestNewsCardArea}</div>
+          <div className="card-news-zone">{LatestNewsCardArea}</div>
+          <div className="card-news-zone">{LatestNewsCardArea}</div>
           <div className="card-news-zone">{LatestNewsCardArea}</div>
         </AliceCarousel>
       </div>

@@ -1,30 +1,12 @@
 import { useState } from "react";
-import { Outlet, Link } from "react-router-dom";
+import { Outlet, Link, useNavigate } from "react-router-dom";
+import { toast, ToastContainer } from "react-toastify"
 
 export default function SignUpFunc(props) {
-    const [users , setUsers] = useState([]);
-    function handleRegister(event) {
-        event.preventDefault();
-        console.log(event.target.firstname.value)
-        console.log(event.target.email.value)
-        console.log(event.target.password.value)
-        console.log(users)
-      
-        const user = {
-          firstname: event.target.firstname.value,
-          lastname: event.target.email.value,
-          password: event.target.password.value,
-        }
-      
-      
-        setUsers([...users, user])
-      }
-      
-
   return (
     <div className="SignUpContainer">
         <h1>{props.name}</h1>
-      <form onSubmit={handleRegister}>
+      <form>
        <p>Name*</p>
        <input type="text" name="firstname" placeholder={props.firstname}></input>
        
@@ -35,10 +17,10 @@ export default function SignUpFunc(props) {
        <input type="password" name="password" placeholder={props.password}></input>
        <p className="pass-title">{props.passtitle}</p>
         <div>
-            <button>{props.button}</button>
+            <Link to={"/createaccount"}><button className="creat-button">{props.button}</button></Link>
         </div>
         <div className="have-acc">
-        <p>{props.ask}</p><Link to={"#"}>{props.login}</Link>
+        <p>{props.ask}</p><Link to={"/home"}>{props.login}</Link>
         </div>
       </form>
     </div>

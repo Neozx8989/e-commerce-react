@@ -1,26 +1,27 @@
 /*  SIGN UPP ZONE  */
 
-.SignUpContainer {
+.CreateAccContainer {
     padding: 166.5px 204.5px;
     width: 769px;
     height: 799px;
     margin: 0 auto;
+    margin-bottom: 50px;
 }
 
-.SignUpContainer h1 {
+.CreateAccContainer h1 {
     font-weight: 600;
     font-size: 30px;
     color: #101828;
 }
 
-.SignUpContainer form {
+.CreateAccContainer form {
     width: 360px;
     height: 466px;
     margin: 0 auto;
     margin-top: 32px;
 }
 
-.SignUpContainer form input {
+.CreateAccContainer form input {
     padding: 10px 14px;
     border: none;
     border: 1px solid #D0D5DD;
@@ -28,7 +29,7 @@
     border-radius: 8px;
 }
 
-.SignUpContainer form .creat-button {
+.CreateAccContainer form button {
     border: none;
     padding: 10px;
     width: 360px;
@@ -41,7 +42,7 @@
     transition-duration: 250ms;
 }
 
-.SignUpContainer form .creat-button:hover {
+.CreateAccContainer form button:hover {
     border: none;
     padding: 10px;
     width: 360px;
@@ -53,24 +54,24 @@
     border-radius: 8px;
 }
 
-.SignUpContainer .pass-title {
+.CreateAccContainer .pass-title {
     color: #667085;
     font-weight: 400;
     font-size: 14px;
 }
 
-.SignUpContainer .have-acc {
+.CreateAccContainer .have-acc {
     display: flex;
     gap: 4px;
     margin-top: 32px;
     padding-left: 50px;
 }
-.SignUpContainer .have-acc a {
+.CreateAccContainer .have-acc a {
     text-decoration: none;
     color: #6941C6;
     font-weight: 600;
 }
 
-.SignUpContainer .have-acc p {
+.CreateAccContainer .have-acc p {
     color: #667085;
 }
