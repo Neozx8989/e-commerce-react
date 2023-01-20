@@ -2,21 +2,6 @@ import AliceCarousel from "react-alice-carousel";
 import { useState } from "react";
 import { Rating } from "react-simple-star-rating";
 import { Link } from "react-router-dom";
-import DetailPageApp from "./detailpage/DetailPageApp";
-
-function AdverstingPopularFunc(props) {
-  return (
-    <div className="product-area">
-      <div className="products-card">
-        <img src={props.productImageUrl} />
-        <div className="product-card-text">
-          <h1>{props.title}</h1>
-          <p>{props.item}</p>
-        </div>
-      </div>
-    </div>
-  );
-}
 
 function AdverstingFunc(props) {
   return (
@@ -87,6 +72,20 @@ function AdverstingFunc(props) {
         />
       </div>
     </AliceCarousel>
+  );
+}
+
+function AdverstingPopularFunc(props) {
+  return (
+    <div className="product-area">
+      <div className="products-card">
+        <img src={props.productImageUrl} />
+        <div className="product-card-text">
+          <h1>{props.title}</h1>
+          <p>{props.item}</p>
+        </div>
+      </div>
+    </div>
   );
 }
 
