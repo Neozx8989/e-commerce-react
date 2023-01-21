@@ -1,0 +1,239 @@
+.cart-container .cart-nav {
+  display: flex;
+  gap: 54px;
+  background-color: #fdfdfd;
+  padding: 26px 63px;
+  width: 1440px;
+  margin: 0 auto;
+  margin-bottom: 31px;
+}
+
+.cart-nav a {
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 16px;
+  color: #3a3a3a;
+}
+
+.cart-zone {
+  display: flex;
+  justify-content: center;
+  gap: 21px;
+}
+
+.cart-product-list-area {
+  width: 872px;
+  margin-bottom: 96px;
+}
+
+.cart-product-list-area .header {
+  display: flex;
+  background-color: #e2f4ff;
+  gap: 251px;
+  padding: 10px 34px;
+}
+
+.cart-product-list-area .header h1 {
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.header .pqs {
+  display: flex;
+  gap: 107px;
+}
+
+.products-list-area {
+  display: flex;
+  align-items: center;
+  gap: 21px;
+  border-bottom: 1px solid #c3c3c3;
+  padding-top: 25px;
+  padding-bottom: 28px;
+}
+
+.product-info-area h1 {
+  font-size: 20px;
+  font-weight: 600;
+  color: #003f62;
+}
+
+.product-info-area p {
+  font-size: 20px;
+  font-weight: 400;
+  color: #2f2f2f;
+}
+
+.products-list-area h3 {
+  color: #2f2f2f;
+  font-weight: 500;
+  font-size: 22.68px;
+  margin-left: 50px;
+  margin-right: 50px;
+}
+
+.quantity-area-btn button {
+  padding: 2.5px 12px;
+}
+
+.quantity-area-btn button:last-child {
+  margin-right: 50px;
+}
+
+.buttons-zone {
+  display: flex;
+  gap: 61px;
+  justify-content: center;
+  margin-top: 31px;
+}
+
+.buttons-zone button {
+  padding: 19px 37px;
+  border-radius: 32px;
+  border: none;
+  background-color: white;
+}
+
+.buttons-zone button:first-child {
+  background-color: #eda415;
+  color: white;
+  transition: all 200ms;
+}
+
+.buttons-zone button:first-child:hover {
+  background-color: #003f62;
+  color: white;
+}
+
+.buttons-zone button:nth-child(2) {
+  border: 1px solid #a9a9a9;
+  color: #a9a9a9;
+  transition: all 200ms;
+}
+
+.buttons-zone button:nth-child(2):hover {
+  border: 1px solid #a9a9a9;
+  color: #ffffff;
+  background-color: #a9a9a9;
+}
+
+.buttons-zone button:last-child {
+  border: 1px solid #c33131;
+  color: #c33131;
+  transition: all 200ms;
+}
+
+.buttons-zone button:last-child:hover {
+  border: 1px solid #c33131;
+  color: #ffffff;
+  background-color: #c33131;
+}
+
+.cart-total-list-area {
+  width: 424px;
+  height: 499px;
+}
+
+.cart-total-list-area h1 {
+  background-color: #e2f4ff;
+  font-size: 20px;
+  font-weight: 500;
+  padding: 14px 162px;
+}
+
+
+.cart-total-list-area .sub-total {
+    display: flex;
+    justify-content:space-between;
+    padding: 23px 43px;
+    border-bottom: 1px solid #AFAFAF;
+}
+
+.cart-total-list-area .sub-total p {
+    color: #232323;
+    font-weight: 500;
+    font-size: 19.68px;
+}
+
+.form-zone-area {
+    display: flex;
+    padding: 33px 43px;
+    border-bottom: 1px solid #AFAFAF;
+}
+
+.form-zone-area input {
+    padding: 14px 23px;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    border: none;
+    border-right: none;
+    border-bottom: 1px solid #DFDFDF;
+    border-left: 1px solid #DFDFDF;
+    border-top: 1px solid #DFDFDF;
+}
+
+.form-zone-area button {
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    padding: 20px 21px 20px 11px;
+    border: none;
+    border-left: none;
+    border-top: 1px solid #DFDFDF;
+    border-right: 1px solid #DFDFDF;
+    border-bottom: 1px solid #DFDFDF;
+    color: #003F62;
+    font-weight: 500;
+    background-color: white;
+    transition: all 200ms;
+}
+.form-zone-area button:hover {
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    padding: 20px 21px 20px 11px;
+    border: none;
+    border-left: none;
+    border-top: 1px solid #DFDFDF;
+    border-right: 1px solid #DFDFDF;
+    border-bottom: 1px solid #DFDFDF;
+    color: #ffffff;
+    font-weight: 500;
+    background-color: #EDA415;
+}
+
+.cart-total-list-area select {
+    margin: 33px 43px;
+    padding: 14px 23px;
+    width: 333px;
+    border-radius: 20px;
+    border: 1px solid #DFDFDF;
+}
+
+.cart-total-list-area .total-ammount {
+    display: flex;
+    justify-content:space-between;
+    padding: 23px 43px;
+    color: #232323;
+}
+
+.checkout {
+    background-color: #EDA415;
+    padding: 10px 62px;
+    border-radius: 20px;
+    color: white;
+    border: none;
+    font-weight: 600;
+    font-size: 20.7px;
+    margin-left: 35.5px;
+    transition: all 200ms;
+}
+
+.checkout:hover {
+    background-color:  #003F62;
+    padding: 10px 62px;
+    border-radius: 20px;
+    color: white;
+    border: none;
+    font-weight: 600;
+    font-size: 20.7px;
+    margin-left: 35.5px;
+}
