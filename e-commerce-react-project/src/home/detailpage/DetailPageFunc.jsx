@@ -43,7 +43,7 @@ export default function DetailPageFunc(props) {
             </div>
           </p>
           <div className="button-area">
-            <button>{props.add}</button>
+            <Link to={'/cart'}><button>{props.add}</button></Link>
             <button>{props.buy}</button>
             <a>{props.heart}</a>
           </div>

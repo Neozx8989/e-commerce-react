@@ -131,7 +131,8 @@
 
 .cart-total-list-area {
   width: 424px;
-  height: 499px;
+  height: 560px;
+  border: 1px solid #C3C3C3;
 }
 
 .cart-total-list-area h1 {

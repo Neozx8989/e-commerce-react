@@ -1,4 +1,9 @@
+import { useState } from "react";
+
 export default function CartFunc(props) {
+  const [counter, setCounter] = useState(0);
+  const [counter2, setCounter2] = useState(0);
+
   return (
     <div className="cart-container">
       <div className="cart-nav">
@@ -26,9 +31,9 @@ export default function CartFunc(props) {
             </div>
             <h3>{props.price}</h3>
             <div className="quantity-area-btn">
-              <button>-</button>
-              <button>1</button>
-              <button>+</button>
+              <button onClick={() => setCounter(counter - 1)}>-</button>
+              <button>{counter}</button>
+              <button onClick={() => setCounter(counter + 1)}>+</button>
             </div>
             <h3>{props.price}</h3>
           </div>
@@ -42,9 +47,9 @@ export default function CartFunc(props) {
             </div>
             <h3>{props.price}</h3>
             <div className="quantity-area-btn">
-              <button>-</button>
-              <button>1</button>
-              <button>+</button>
+              <button onClick={() => setCounter2(counter2 - 1)}>-</button>
+              <button>{counter2}</button>
+              <button onClick={() => setCounter2(counter2 + 1)}>+</button>
             </div>
             <h3>{props.price}</h3>
           </div>

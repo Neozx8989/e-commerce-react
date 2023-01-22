@@ -6,7 +6,7 @@ import MainMenu from "./MainMenu";
 
 
 function Navigation() {
-    const [wishlist, setWishlist] = useState(0);
+    const [addCard, setAddCard] = useState(0);
 
     const productList = products.map((product) => {
         return (
@@ -16,8 +16,7 @@ function Navigation() {
                 truck={product.truck}
                 signin={product.signin}
                 logoImageUrl={product.logoImageUrl}
-                wishlist={wishlist}
-                wishlisticon={product.wishlisticon}
+                addCard={addCard}
             />
         );
     });
