@@ -37,8 +37,10 @@ import {
   LatestNewsFunc,
   LatestNewsCardFunc,
 } from "../home/LatestNewsFunc";
+import { useState } from "react";
 
 function Home(props) {
+  const [addCard, setAddCard] = useState([]);
   const AdverstingCard = Adversting.map((advers) => {
     return (
       <AdverstingFunc
@@ -81,8 +83,8 @@ function Home(props) {
         price={product.price}
         rating={product.rating}
         basket={product.basket}
-        wishlist={props.wishlist}
-        setWishlist={props.setWishlist}
+        addCard={props.addCard}
+        setAddCard={props.setAddCard}
       />
     );
   });
@@ -179,7 +181,7 @@ function Home(props) {
       {PopularProductsArea}
 
       <AliceCarousel autoPlay autoPlayInterval="3000">
-        <div className="all-products">{ProductsCardArea}</div>
+        <div className="all-products" addCard={addCard} setAddCard={setAddCard}>{ProductsCardArea}</div>
         <div className="all-products">{ProductsCardArea}</div>
         <div className="all-products">{ProductsCardArea}</div>
       </AliceCarousel>

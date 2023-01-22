@@ -106,43 +106,23 @@ function PopularProductsFunc(props) {
 }
 
 function ProductsCardFunc(props) {
-  const values = [true];
-  const [fullscreen, setFullscreen] = useState(true);
-  const [show, setShow] = useState(false);
-
-  function handleShow(breakpoint) {
-    setFullscreen(breakpoint);
-    setShow(true);
-  }
-
-  function handleCart() {
-    props.setWishlist(props.wishlist);
-    console.log(props.wishlist);
-  }
-
+  const [addCard, setAddCard] = useState(0)
+  console.log(addCard)
   return (
-    <div className="products-card-area">
-      {values.map((v, idx) => (
-        <div key={idx} onClick={() => handleShow(v)}>
+    <div className="products-card-area">   
           <Link to={"/detailpage"}>
             <img src={props.productImageUrl} />
           </Link>
-          {typeof v === "string" && `below ${v.split("-")[0]}`}
-        </div>
-      ))}
       <div className="product-info">
         <div>
-          <Link to={`/detailpage/${props.id}`}>
-            {" "}
-            <h4>{props.title}</h4>
-          </Link>
+          <h4>{props.title}</h4>
           <h5>{props.price}</h5>
           <Rating>
             <p className="icons"></p>
           </Rating>
         </div>
         <div className="basket-add">
-          <button onClick={handleCart}>{props.basket}</button>
+          <button onClick={()=>setAddCard(addCard + 1)}>{props.basket}</button>
         </div>
       </div>
     </div>
