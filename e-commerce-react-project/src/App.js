@@ -10,7 +10,7 @@ import CreateAccApp from "./create-account/CreateAccApp";
 import CartApp from "./cart/CartApp";
 function App() {
   const [wishlist, setWishlist] = useState([]);
-  const [addCard, setAddCard] = useState([])
+  const [addCard, setAddCard] = useState(0)
   return (
     <div>
       <Navigation addCard={addCard} setAddCard={setAddCard}/>
@@ -18,7 +18,7 @@ function App() {
         <Route path="/createaccount" element={<CreateAccApp/>}/>
         <Route path="/signup" element={<SignUpJs/>}/>
         <Route path="/" element={<SignUpJs/>}/>
-        <Route path="/home" element={<Home/>}/>
+        <Route path="/home" element={<Home addCard={addCard} setAddCard={setAddCard}/>}/>
         <Route path="/detailpage" element={<DetailPageApp/>}/>
         <Route path='/cart' element={<CartApp/>}/>
       </Routes> 
