@@ -1,12 +1,11 @@
 import "../App.css";
 import { useState } from "react";
-import ProductFunc from "./Product";
+import ProductFunc from "./ProductFunc";
 import products from "./Api";
 import MainMenu from "./MainMenu";
 
 
-function Navigation() {
-    const [addCard, setAddCard] = useState(0);
+function Navigation(props) {
 
     const productList = products.map((product) => {
         return (
@@ -16,7 +15,8 @@ function Navigation() {
                 truck={product.truck}
                 signin={product.signin}
                 logoImageUrl={product.logoImageUrl}
-                addCard={addCard}
+                addCard={props.addCard}
+                setAddCard={props.setAddCard}
             />
         );
     });

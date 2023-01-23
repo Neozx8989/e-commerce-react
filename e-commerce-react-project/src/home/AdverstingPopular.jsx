@@ -106,8 +106,12 @@ function PopularProductsFunc(props) {
 }
 
 function ProductsCardFunc(props) {
-  const [addCard, setAddCard] = useState(0)
-  console.log(addCard)
+  console.log(props.addCard)
+
+  function addClick (){
+    props.setAddCard(props.addCard + 1)
+  }
+
   return (
     <div className="products-card-area">   
           <Link to={"/detailpage"}>
@@ -122,7 +126,7 @@ function ProductsCardFunc(props) {
           </Rating>
         </div>
         <div className="basket-add">
-          <button onClick={()=>setAddCard(addCard + 1)}>{props.basket}</button>
+          <button onClick={addClick}>{props.basket}</button>
         </div>
       </div>
     </div>

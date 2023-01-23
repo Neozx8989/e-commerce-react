@@ -2,6 +2,7 @@ import { Route, Routes, Link } from 'react-router-dom';
 import SignUpJs from '../signup/SignUpMain';
 
 function ProductFunc(props) {
+  console.log(props.addCArd)
   return (
     <div>
       <div className="container-text">
@@ -21,7 +22,7 @@ function ProductFunc(props) {
           <div className="sign-in">
             <Link to={'signup'}><i class="bi bi-person"></i> Sign up</Link>
             <p><i class="bi bi-heart"></i>{props.wishlist}</p>
-            <Link to={'/cart'}><p><i class="bi bi-cart3"></i>{props.addCard}</p></Link>
+            <Link to={'#'}><p><i class="bi bi-cart3"></i>{props.addCard}</p></Link>
           </div>
         </nav>
         <div className="nav-items"></div>
