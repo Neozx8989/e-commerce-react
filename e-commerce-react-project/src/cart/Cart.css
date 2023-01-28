@@ -26,6 +26,10 @@
   margin-bottom: 96px;
 }
 
+.cart-product-list-area img {
+  width: 150px;
+}
+
 .cart-product-list-area .header {
   display: flex;
   background-color: #e2f4ff;
