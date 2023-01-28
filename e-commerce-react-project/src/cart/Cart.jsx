@@ -39,6 +39,22 @@ export default function CartFunc(props) {
           </div>
 
           <div className="products-list-area">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/c/c8/News_camera_%28with_transparent_background%29.png" alt="xbox green controler" />
+            <div className="product-info-area">
+              <h1>{props.productName}</h1>
+              <p>Color: Green</p>
+              <p>Size: 30</p>
+            </div>
+            <h3>{props.price}</h3>
+            <div className="quantity-area-btn">
+              <button onClick={() => setCounter(counter - 1)}>-</button>
+              <button>{counter}</button>
+              <button onClick={() => setCounter(counter + 1)}>+</button>
+            </div>
+            <h3>{props.price}</h3>
+          </div>
+
+          <div className="products-list-area">
             <img src={props.productImage2} alt="xbox black controler" />
             <div className="product-info-area">
               <h1>{props.productName}</h1>
