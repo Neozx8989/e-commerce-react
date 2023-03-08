@@ -1,49 +1,44 @@
 import "../App.css";
+import "../home/FPopularproducts/FPopularProducts.css";
+import "../home/SPopularProductsSlideCards/SPopularProductsSlideCards.css";
+import "../home/TPopularProductsCards/TPopularProductsCards.css";
+import "../home/SalestProduct/SalestProduct.css";
+import "../home/NextPopularProductsCards/NextPopularProductsCards.css";
+import "../home/LatestNews/LatestNews.css";
+
 import AliceCarousel from "react-alice-carousel";
 
-import {
-  AdverstingPopular,
-  Adversting,
-  PopularProducts,
-  ProductsCard,
-} from "../home/data/AdverstinPopular";
+import {FPopularProductsAPI} from "../home/FPopularproducts/FPopularProdcutsAPI"
+import {FPopularProductsFunc} from "../home/FPopularproducts/FPopularProducts"
 
-import {
-  AdverstingPopularFunc,
-  AdverstingFunc,
-  PopularProductsFunc,
-  ProductsCardFunc,
-} from "../home/AdverstingPopular";
+import {SPopularProductsSlideCardsAPI} from "../home/SPopularProductsSlideCards/SPopularProductsSlideCardsAPI"
+import {SPopularProductsSlideCardFunc} from "../home/SPopularProductsSlideCards/SPopularProductsSlideCards"
 
-import { SaleLaptop, AddCarts, NextAddCarts } from "../home/data/AddCarts";
+import {TPopularProductsCardAPI} from "../home/TPopularProductsCards/TPopularProductsCardsAPI"
+import {TPopularProductsCardFunc} from "../home/TPopularProductsCards/TPopularProductsCards"
 
-import {
-  SaleProductFunc,
-  AddingToCarts,
-  NextAddToCarts,
-} from "../home/AddToCarts";
+import { SalestProductAPI } from "./SalestProduct/SalestProductAPI";
+import { SalestProductFunc } from "./SalestProduct/SalestProduct";
+
+import { AddCartsAPI, NextAddCartsAPI } from "./NextPopularProductsCards/NextPopularProductsCardsAPI";
+import { AddingToCartsFunc, NextAddToCartsFunc } from "../home/NextPopularProductsCards/NextPopularProductsCards";
+
+import { LatestNewsDataAPI, NewsCardDataAPI } from "./LatestNews/LatestNewsAPI";
+import { LatestNewsCardFunc, LatestNewsFunc } from "./LatestNews/LatestNews";
+
+import {PopularProducts} from "../home/data/AdverstinPopular";
+import {PopularProductsFunc} from "../home/AdverstingPopular";
+
+import {SponserData} from "../home/data/LatestNews";
+import {SponsereFunc} from "../home/LatestNewsFunc";
 
 import { LicensesData, CommentCard } from "./data/Licenses";
-import { LicenseCardFunc, CommentCardFunc } from "../home/LicenseCard";
-
-import {
-  SponserData,
-  LatestNewsData,
-  NewsCardData,
-} from "../home/data/LatestNews";
-
-import {
-  SponsereFunc,
-  LatestNewsFunc,
-  LatestNewsCardFunc,
-} from "../home/LatestNewsFunc";
-import { useState } from "react";
+import { LicenseCardFunc, CommentCardFunc } from "./LicenseCard";
 
 function Home(props) {
-  // const [addCard, setAddCard] = useState([]);
-  const AdverstingCard = Adversting.map((advers) => {
+  const FPopularProductVAR = FPopularProductsAPI.map((advers) => {
     return (
-      <AdverstingFunc
+      <FPopularProductsFunc
         title={advers.title}
         buttonshop={advers.buttonshop}
         buttonview={advers.buttonview}
@@ -52,10 +47,9 @@ function Home(props) {
     );
   });
 
-  const AdverstingPopularCard = AdverstingPopular.map((product) => {
-    console.log(product);
+  const SPopularProductsSlideCardsVAR = SPopularProductsSlideCardsAPI.map((product) => {
     return (
-      <AdverstingPopularFunc
+      <SPopularProductsSlideCardFunc
         addCard={props.addCard}
         setAddCard={props.setAddCard}
         productImageUrl={product.productImageUrl}
@@ -65,7 +59,7 @@ function Home(props) {
     );
   });
 
-  const PopularProductsArea = PopularProducts.map((products) => {
+  const PopularProductsVAR = PopularProducts.map((products) => {
     return (
       <PopularProductsFunc
         title={products.title}
@@ -77,9 +71,9 @@ function Home(props) {
     );
   });
 
-  const ProductsCardArea = ProductsCard.map((product) => {
+  const TPopularProductsCardVAR = TPopularProductsCardAPI.map((product) => {
     return (
-      <ProductsCardFunc
+      <TPopularProductsCardFunc
         productImageUrl={product.productImageUrl}
         title={product.title}
         price={product.price}
@@ -91,9 +85,9 @@ function Home(props) {
     );
   });
 
-  const SaleProductArea = SaleLaptop.map((product) => {
+  const SalestProductVAR = SalestProductAPI.map((product) => {
     return (
-      <SaleProductFunc
+      <SalestProductFunc
         salelaptop={product.salelaptop}
         newproductbutton={product.newproductbutton}
         title={product.title}
@@ -103,9 +97,9 @@ function Home(props) {
     );
   });
 
-  const AddToCartArea = AddCarts.map((product) => {
+  const AddToCartVAR = AddCartsAPI.map((product) => {
     return (
-      <AddingToCarts
+      <AddingToCartsFunc
         productImageUrl={product.productImageUrl}
         name={product.name}
         price={product.price}
@@ -115,9 +109,9 @@ function Home(props) {
     );
   });
 
-  const NextAddToCartArea = NextAddCarts.map((product) => {
+  const NextAddToCartVAR = NextAddCartsAPI.map((product) => {
     return (
-      <NextAddToCarts
+      <NextAddToCartsFunc
         productImageUrl={product.productImageUrl}
         name={product.name}
         price={product.price}
@@ -150,13 +144,13 @@ function Home(props) {
     return <SponsereFunc logoImageUrl={logos.logoImageUrl} />;
   });
 
-  const LatestNewsArea = LatestNewsData.map((latestnews) => {
+  const LatestNewsVAR = LatestNewsDataAPI.map((latestnews) => {
     return (
       <LatestNewsFunc title={latestnews.title} allnews={latestnews.allnews} />
     );
   });
 
-  const LatestNewsCardArea = NewsCardData.map((card) => {
+  const LatestNewsCardVAR = NewsCardDataAPI.map((card) => {
     return (
       <LatestNewsCardFunc
         ImageUrl={card.ImageUrl}
@@ -170,44 +164,59 @@ function Home(props) {
 
   return (
     <div className="god-cont">
-      <div className="carousel-adversting">{AdverstingCard}</div>
 
-      <div className="carousel-three-cards">
-        <AliceCarousel>
-          <div className="three-card">{AdverstingPopularCard}</div>
-          <div className="three-card">{AdverstingPopularCard}</div>
-          <div className="three-card">{AdverstingPopularCard}</div>
-        </AliceCarousel>
-      </div>
-      
-      {PopularProductsArea}
+        {/* Hamgiin ehnii product slide heseg */}
+        <div className="carousel-adversting">{ FPopularProductVAR}</div>
 
-      <AliceCarousel autoPlay autoPlayInterval="3000">
-        <div className="all-products">{ProductsCardArea}</div>
-        <div className="all-products">{ProductsCardArea}</div>
-        <div className="all-products">{ProductsCardArea}</div>
-      </AliceCarousel>
-      {SaleProductArea}
-      <div className="all-adding-cart">
-        {AddToCartArea}
-        <div className="next-adding-cart">{NextAddToCartArea}</div>
-      </div>
-      <div className="license-card-cont">{LicenseCardArea}</div>
-      <AliceCarousel autoPlay autoPlayInterval="3000">
-        <div className="comment-card-area-cont">{CommentCardArea}</div>
-        <div className="comment-card-area-cont">{CommentCardArea}</div>
-        <div className="comment-card-area-cont">{CommentCardArea}</div>
-      </AliceCarousel>
-      <div className="sponser-company-logo">{SponserCompanyArea}</div>
-      <div className="latest-news-zone">
-        {LatestNewsArea}
+        <div className="carousel-three-cards">
+          <AliceCarousel>
+
+            {/* 2dh 3card-tai slide heseg */}
+            <div className="three-card">{SPopularProductsSlideCardsVAR}</div>
+
+          </AliceCarousel>
+        </div>
+
+        {/* Product uudiig filter hiih buttontai heseg */}
+        {PopularProductsVAR}
+
         <AliceCarousel autoPlay autoPlayInterval="3000">
-          <div className="card-news-zone">{LatestNewsCardArea}</div>
-          <div className="card-news-zone">{LatestNewsCardArea}</div>
-          <div className="card-news-zone">{LatestNewsCardArea}</div>
-          <div className="card-news-zone">{LatestNewsCardArea}</div>
+
+          {/* 8 product card haragdah heseg */}
+          <div className="all-products">{TPopularProductsCardVAR}</div>
+          
         </AliceCarousel>
-      </div>
+
+        {/* Hymdral zaralsan laptop adversting heseg */}
+        {SalestProductVAR}
+
+        <div className="all-adding-cart">
+
+          {/* 4dh product carduudin heseg 3 card bga */}
+          {AddToCartVAR}
+          <div className="next-adding-cart">{NextAddToCartVAR}</div>
+
+        </div>
+
+        <div className="license-card-cont">{LicenseCardArea}</div>
+
+        <AliceCarousel autoPlay autoPlayInterval="3000">
+
+          {/* Hereglechnarin setgegdeltei card heseg */}
+          <div className="comment-card-area-cont">{CommentCardArea}</div>
+
+        </AliceCarousel>
+
+        <div className="sponser-company-logo">{SponserCompanyArea}</div>
+
+        <div className="latest-news-zone">
+          {/* Svvlin shine medee medeellin cardud */}
+          {LatestNewsVAR}
+          
+          <AliceCarousel autoPlay autoPlayInterval="3000">
+            <div className="card-news-zone">{LatestNewsCardVAR}</div>
+          </AliceCarousel>
+        </div>
     </div>
   );
 }

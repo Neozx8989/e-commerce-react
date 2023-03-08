@@ -3,92 +3,6 @@ import { useState } from "react";
 import { Rating } from "react-simple-star-rating";
 import { Link } from "react-router-dom";
 
-function AdverstingFunc(props) {
-  return (
-    <AliceCarousel autoPlay autoPlayInterval="5000">
-      <div className="adversting-area">
-        <div className="left-area">
-          <h1>Iphone 13 Case</h1>
-          <div className="shopview">
-            <button>{props.buttonshop}</button>
-            <button>{props.buttonview}</button>
-          </div>
-        </div>
-        <img
-          src="http://cdn.shopify.com/s/files/1/0037/7798/6630/products/71613lct0PL._SL1500_9725f828-f9f0-4678-928d-9f06f522f217.jpg?v=1673089567"
-          alt="Canon camera"
-        />
-      </div>
-      <div className="adversting-area">
-        <div className="left-area">
-          <h1>Canon CDN 300</h1>
-          <div className="shopview">
-            <button>{props.buttonshop}</button>
-            <button>{props.buttonview}</button>
-          </div>
-        </div>
-        <img
-          src="https://i1.adis.ws/i/canon/cr-n300-bk-frt-04_full-ptz-range_02_ff9db74d048540108262c426a3ad2678"
-          alt="Canon camera"
-        />
-      </div>
-      <div className="adversting-area">
-        <div className="left-area">
-          <h1>PS5 controler</h1>
-          <div className="shopview">
-            <button>{props.buttonshop}</button>
-            <button>{props.buttonview}</button>
-          </div>
-        </div>
-        <img
-          src="https://cdn.shopify.com/s/files/1/2231/0539/products/PlayStation-5-DualSense-PS5-Custom-Controller-Hyper-Space-Edition_700x700.png?v=1657532806"
-          alt="Canon camera"
-        />
-      </div>
-      <div className="adversting-area">
-        <div className="left-area">
-          <h1>Apple AirPods Max</h1>
-          <div className="shopview">
-            <button>{props.buttonshop}</button>
-            <button>{props.buttonview}</button>
-          </div>
-        </div>
-        <img
-          src="https://ph-test-11.slatic.net/p/75fa70a12d52a377665d93c4bc210fee.jpg"
-          alt="Canon camera"
-        />
-      </div>
-      <div className="adversting-area">
-        <div className="left-area">
-          <h1>Iphone 14 Pro</h1>
-          <div className="shopview">
-            <button>{props.buttonshop}</button>
-            <button>{props.buttonview}</button>
-          </div>
-        </div>
-        <img
-          src="https://m.media-amazon.com/images/I/71MIxZaKqgL.jpg"
-          alt="Canon camera"
-        />
-      </div>
-    </AliceCarousel>
-  );
-}
-
-function AdverstingPopularFunc(props) {
-  return (
-    <div className="product-area">
-      <div className="products-card">
-        <img src={props.productImageUrl} />
-        <div className="product-card-text">
-          <h1>{props.title}</h1>
-          <p>{props.item}</p>
-        </div>
-      </div>
-    </div>
-  );
-}
-
 function PopularProductsFunc(props) {
   return (
     <div className="products-area">
@@ -99,34 +13,6 @@ function PopularProductsFunc(props) {
           <button>{props.item2}</button>
           <button>{props.item3}</button>
           <button>{props.item4}</button>
-        </div>
-      </div>
-    </div>
-  );
-}
-
-function ProductsCardFunc(props) {
-  console.log(props.addCard)
-
-  function addClick (){
-    props.setAddCard(props.addCard + 1)
-  }
-
-  return (
-    <div className="products-card-area">   
-          <Link to={"/detailpage"}>
-            <img src={props.productImageUrl} />
-          </Link>
-      <div className="product-info">
-        <div>
-          <h4>{props.title}</h4>
-          <h5>{props.price}</h5>
-          <Rating>
-            <p className="icons"></p>
-          </Rating>
-        </div>
-        <div className="basket-add">
-          <button onClick={addClick}>{props.basket}</button>
         </div>
       </div>
     </div>
@@ -166,11 +52,8 @@ function LatestNewsCardFunc(props) {
 }
 
 export {
-  AdverstingPopularFunc,
-  AdverstingFunc,
   SponsereFunc,
   LatestNewsFunc,
   LatestNewsCardFunc,
   PopularProductsFunc,
-  ProductsCardFunc,
 };

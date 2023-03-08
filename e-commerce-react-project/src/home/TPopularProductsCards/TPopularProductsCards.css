@@ -1,0 +1,39 @@
+.products-card-area {
+    border: 0.9px solid #b6b6b6;
+    width: 308px;
+    height: 313px;
+    border-radius: 19px;
+  }
+  
+  .products-card-area img {
+    padding: 16.34px 40.39px;
+    border-radius: 20px;
+  }
+  
+  .products-card-area button {
+    background-color: #eda415;
+    color: white;
+    border: none;
+    padding: 10px 13px;
+    border-radius: 50%;
+  }
+  
+  .product-info {
+    padding: 9.8px 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+  }
+  
+  .products-card-area h4 {
+    font-size: 17px;
+    font-weight: 500;
+    color: #003f62;
+  }
+  
+  .products-card-area h5 {
+    font-size: 17px;
+    font-weight: 600;
+    color: #4a4a4a;
+  }
+  
