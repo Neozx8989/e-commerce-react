@@ -1,0 +1,53 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+  }
+
+.adversting-area {
+    display: flex;
+    gap: 450px;
+    justify-content: space-evenly;
+    height: 394px;
+    width: 1440px;
+    padding: 67px 174px;
+    margin: 0 auto;
+  }
+  
+  .adversting-area img {
+    height: 356px;
+    padding-bottom: 52px;
+  }
+  
+  .left-area h1 {
+    font-size: 33px;
+    font-weight: 700;
+    color: #1b5a7d;
+    line-height: 40px;
+    width: 175px;
+    margin-top: 40px;
+  }
+  
+  .shopview {
+    display: flex;
+    gap: 21px;
+    margin-top: 19px;
+  }
+  
+  .shopview button {
+    border: none;
+    padding: 18px 32px;
+    border-radius: 20px;
+  }
+  
+  .shopview button:first-child {
+    background-color: #eda415;
+    color: white;
+    font-weight: 600;
+  }
+  
+  .shopview button:last-child {
+    border: 1px solid #316887;
+    background-color: white;
+  }

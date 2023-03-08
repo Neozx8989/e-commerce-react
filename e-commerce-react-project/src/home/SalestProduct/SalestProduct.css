@@ -1,0 +1,42 @@
+/* laptop shopping area */
+
+.laptop-picture {
+    background-image: url(../SalestProduct/applelaptop.png);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 417px;
+    margin-top: 129px;
+    margin-bottom: 94px;
+  }
+  
+  .laptop-text-area {
+    text-align: center;
+    padding-top: 91px;
+    padding-left: 630px;
+  }
+  
+  .laptop-picture button {
+    border: none;
+    background-color: #eda415;
+    padding: 12px 32px;
+    border-radius: 20px;
+    color: white;
+    font-weight: 500px;
+    font-size: 14.09px;
+    margin: 15px;
+  }
+  
+  .laptop-picture h1 {
+    font-weight: 700;
+    font-size: 41px;
+    line-height: 62px;
+    color: #2e8fc5;
+  }
+  
+  .laptop-picture p {
+    font-size: 18px;
+    font-weight: 500;
+    color: #ffffff;
+  }
+  

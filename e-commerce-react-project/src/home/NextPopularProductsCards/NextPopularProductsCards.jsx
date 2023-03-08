@@ -1,21 +1,6 @@
 import { Rating } from "react-simple-star-rating";
 
-function SaleProductFunc(props) {
-  return (
-    <div>
-      <div className="laptop-picture">
-        <div className="laptop-text-area">
-          <button>{props.newproductbutton}</button>
-          <h1>{props.title}</h1>
-          <p>{props.displaysize}</p>
-          <button>{props.shopproductbutton}</button>
-        </div>
-      </div>
-    </div>
-  );
-}
-
-function AddingToCarts(props) {
+function AddingToCartsFunc(props) {
   return (
     <div>
       <div className="deepbass-cart">
@@ -33,7 +18,7 @@ function AddingToCarts(props) {
   );
 }
 
-function NextAddToCarts(props) {
+function NextAddToCartsFunc(props) {
   return (
     <div>
       <div className="next-carts">
@@ -48,4 +33,4 @@ function NextAddToCarts(props) {
   );
 }
 
-export { SaleProductFunc, AddingToCarts, NextAddToCarts };
+export { AddingToCartsFunc, NextAddToCartsFunc };
